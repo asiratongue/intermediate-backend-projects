@@ -1,0 +1,1 @@
+To use this, run the command as listed within main.py, and use git bash to send get requests.
