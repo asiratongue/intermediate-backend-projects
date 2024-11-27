@@ -1,0 +1,6 @@
+daphne -p 8000 Broadcast_Server.asgi:application
+
+wscat -c ws://127.0.0.1:8000/ws/endpoint/
+
+docker run --rm -p 6379:6379 redis:7
+
