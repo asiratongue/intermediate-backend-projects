@@ -8,11 +8,11 @@ Built with Django, and celery task queue for real time scheduler processing.
 1) Clone the repo with svn:  
    `svn export https://github.com/asiratongue/intermediate-backend-projects/tree/main/Workout_Tracker`
 
-2) Create and activate the virtual environment with:  
+2) Create and activate the virtual environment from terminal with:  
 `python3 -m venv venv` 
 `PS venv\Scripts\activate (on windows)`
 
-3) Install the dependencies:  
+3) Install the dependencies from terminal with:  
 `pip install -r requirements.txt`
 
 4) start the celery worker:  
@@ -29,13 +29,13 @@ there is some data and users already within the database, credentials can be fou
 
 **Troubleshooting:**  
 To clear redis broker:  
-$ redis-cli  
-$ FLUSHALL  
-$ exit  
+`$ redis-cli`  
+`$ FLUSHALL`  
+`$ exit`  
 
 To clear any python/celery processes that may be running in the background and interfering:  
-taskkill //F //IM python.exe  
-taskkill //F //IM celery.exe
+`taskkill //F //IM python.exe`  
+`taskkill //F //IM celery.exe`
 
 ## **Endpoints**
 
