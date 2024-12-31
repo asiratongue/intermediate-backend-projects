@@ -44,10 +44,10 @@ To clear any python/celery processes that may be running in the background and i
 
 ### **Users**
 
-**POST** `/WorkoutTracker/register/` 
+**POST** `/WorkoutTracker/register/`   
 Register a new user, recieve a JWT code.
 
-**POST** `/WorkoutTracker/login/` 
+**POST** `/WorkoutTracker/login/`   
 User Login, recieve a JWT code.
 
 
