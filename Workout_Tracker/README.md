@@ -1,4 +1,4 @@
-Workout Tracker app which allows users to register, sign in, create and schedule Workout Plans from created "exercise sessions" and generate reports on progress and query for created workout plans/exercise sessions.
+Workout Tracker app which allows users to register, sign in, create and schedule Workout Plans from created "exercise sessions", generate reports on progress and query for created workout plans/exercise sessions.
 there are only 10 exercises in the db currently, but an admin feature to add more exercises is easily implemented using djangos built in admin panel. 
 
 Built with Django, and celery task queue for real time scheduler processing.
