@@ -1,0 +1,65 @@
+curl -X POST http://127.0.0.1:8000/WorkoutTracker/schedule/3 \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODQyNTI2ODk5LCJpYXQiOjE3MzQ1MjY4OTksImp0aSI6ImU5MWE0MjlkOTQ3NjQwNDk5MmQ3MmIzMGJmZTMwMDBkIiwidXNlcl9pZCI6Mn0.r67XLe4wMRkQ9fd0an03c7LMFL8uW6AxGAPF0BhiowQ" \
+  -H "Content-Type: application/json" \
+  -d '{"start_time": "2024-12-31 09:40:40",
+        "duration" : "00:30:00"
+  }'
+
+  curl -X POST http://127.0.0.1:8000/WorkoutTracker/schedule/ \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODQyNTI2ODk5LCJpYXQiOjE3MzQ1MjY4OTksImp0aSI6ImU5MWE0MjlkOTQ3NjQwNDk5MmQ3MmIzMGJmZTMwMDBkIiwidXNlcl9pZCI6Mn0.r67XLe4wMRkQ9fd0an03c7LMFL8uW6AxGAPF0BhiowQ" \
+  -H "Content-Type: application/json" \
+  -d '{"mark_as_pending": "11"}'
+
+
+curl -X GET http://127.0.0.1:8000/WorkoutTracker/report/all/ \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODQyNTI2ODk5LCJpYXQiOjE3MzQ1MjY4OTksImp0aSI6ImU5MWE0MjlkOTQ3NjQwNDk5MmQ3MmIzMGJmZTMwMDBkIiwidXNlcl9pZCI6Mn0.r67XLe4wMRkQ9fd0an03c7LMFL8uW6AxGAPF0BhiowQ" 
+
+
+
+To start the celery worker:
+celery -A WorkoutTracker worker -l DEBUG -P solo
+ 
+
+To start the redis broker:
+sudo service redis-server start
+
+To clear any python/celery processes that may be running in the background and interfering:
+taskkill //F //IM python.exe
+taskkill //F //IM celery.exe
+
+To clear redis broker
+redis-cli
+> FLUSHALL
+> exit
+
+curl -X POST "http://127.0.0.1:8000/WorkoutTracker/schedule/list/" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODQyNTI2ODk5LCJpYXQiOjE3MzQ1MjY4OTksImp0aSI6ImU5MWE0MjlkOTQ3NjQwNDk5MmQ3MmIzMGJmZTMwMDBkIiwidXNlcl9pZCI6Mn0.r67XLe4wMRkQ9fd0an03c7LMFL8uW6AxGAPF0BhiowQ" -H "Content-Type: application/json" -d "{\"List\":\"Pending\"}"
+
+
+curl -X POST http://127.0.0.1:8000/WorkoutTracker/schedule/list/ \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODQyNTI2ODk5LCJpYXQiOjE3MzQ1MjY4OTksImp0aSI6ImU5MWE0MjlkOTQ3NjQwNDk5MmQ3MmIzMGJmZTMwMDBkIiwidXNlcl9pZCI6Mn0.r67XLe4wMRkQ9fd0an03c7LMFL8uW6AxGAPF0BhiowQ" 
+  -H "Content-Type: application/json" \
+  -d '{"List" : "Completed"}'
+
+curl -X POST http://127.0.0.1:8000/WorkoutTracker/schedule/list/ \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODQyNTI2ODk5LCJpYXQiOjE3MzQ1MjY4OTksImp0aSI6ImU5MWE0MjlkOTQ3NjQwNDk5MmQ3MmIzMGJmZTMwMDBkIiwidXNlcl9pZCI6Mn0.r67XLe4wMRkQ9fd0an03c7LMFL8uW6AxGAPF0BhiowQ" 
+  -H "Content-Type: application/json" \
+  -d '{"List" : "All"}'
+
+curl -X GET "http://127.0.0.1:8000/WorkoutTracker/report/?workout=3" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODQyNTI2ODk5LCJpYXQiOjE3MzQ1MjY4OTksImp0aSI6ImU5MWE0MjlkOTQ3NjQwNDk5MmQ3MmIzMGJmZTMwMDBkIiwidXNlcl9pZCI6Mn0.r67XLe4wMRkQ9fd0an03c7LMFL8uW6AxGAPF0BhiowQ"
+
+curl -X GET http://127.0.0.1:8000/WorkoutTracker/report/?date=2024-12-01 -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODQyNTI2ODk5LCJpYXQiOjE3MzQ1MjY4OTksImp0aSI6ImU5MWE0MjlkOTQ3NjQwNDk5MmQ3MmIzMGJmZTMwMDBkIiwidXNlcl9pZCI6Mn0.r67XLe4wMRkQ9fd0an03c7LMFL8uW6AxGAPF0BhiowQ" 
+
+curl -X DELETE http://127.0.0.1:8000/WorkoutTracker/schedule/remove/7/ \
+     -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODQyNTI2ODk5LCJpYXQiOjE3MzQ1MjY4OTksImp0aSI6ImU5MWE0MjlkOTQ3NjQwNDk5MmQ3MmIzMGJmZTMwMDBkIiwidXNlcl9pZCI6Mn0.r67XLe4wMRkQ9fd0an03c7LMFL8uW6AxGAPF0BhiowQ"
+
+
+curl -X PATCH http://127.0.0.1:8000/WorkoutTracker/schedule/update/2/ \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODQyNTI2ODk5LCJpYXQiOjE3MzQ1MjY4OTksImp0aSI6ImU5MWE0MjlkOTQ3NjQwNDk5MmQ3MmIzMGJmZTMwMDBkIiwidXNlcl9pZCI6Mn0.r67XLe4wMRkQ9fd0an03c7LMFL8uW6AxGAPF0BhiowQ" \
+-H "Content-Type: application/json" \
+-d '{
+  "scheduled_workout": {
+    "start_time": "2024-12-30 09:40:00",
+    "duration": "35",
+    "workout_id": "4"
+  }
+}'
