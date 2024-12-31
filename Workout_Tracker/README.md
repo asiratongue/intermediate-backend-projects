@@ -28,16 +28,17 @@ Built with Django, and celery task queue for real time scheduler processing.
 there is some data and users already within the database, credentials can be found within the example_commands.txt from respective django apps.
 
 **Troubleshooting:**  
-To clear redis broker
-redis-cli
-FLUSHALL
-exit
+To clear redis broker:  
+$ redis-cli  
+$ FLUSHALL  
+$ exit  
 
 To clear any python/celery processes that may be running in the background and interfering:  
 taskkill //F //IM python.exe  
 taskkill //F //IM celery.exe
 
 ## **Endpoints**
+
 
 ### **Users**
 
@@ -81,7 +82,6 @@ When making post requests to the '/WorkoutTracker/workout/create/' endpoint, you
 you can also mix and match with newly created exercise sessions, and already existing exercise session keys for the workout plan that you wish to create.
 
  
-
 **GET** `exercises/`  
 List all exercises available within the database.
 
