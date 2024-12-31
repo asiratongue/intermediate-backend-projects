@@ -75,7 +75,7 @@ Make a query on all your scheduled workouts, you can search by date, and by work
 Retrieve all Scheduled Workouts.
 
 
-#### **Workouts**
+### **Workouts**
 
 **POST** `workout/create/`  
 Create a new workout, first creates 'Exercise_Session' objects, given valid exercises, with the right fields set (sets, repetitions, weights).
