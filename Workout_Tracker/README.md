@@ -5,7 +5,7 @@ Built with Django, and celery task queue for real time scheduler processing.
 
 #### **to run and test on windows** 
 
-1) Clone the repo with svn:
+1) Clone the repo with svn:  
    `svn export https://github.com/asiratongue/intermediate-backend-projects/tree/main/Workout_Tracker`
 
 2) Create and activate the virtual environment with:
