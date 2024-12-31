@@ -28,6 +28,8 @@ Built with Django, and celery task queue for real time scheduler processing.
 there is some data and users already within the database, credentials can be found within the example_commands.txt from respective django apps.
 
 **Troubleshooting:**  
+
+
 To clear redis broker:  
 `$ redis-cli`  
 `$ FLUSHALL`  
