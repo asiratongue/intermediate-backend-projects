@@ -8,7 +8,7 @@ Built with Django, and celery task queue for real time scheduler processing.
 git clone 
 
 Create and activate the virtual environment with:
-python3 -m venv venv
+'python3 -m venv venv'
 PS venv\Scripts\activate (on windows)
 
 Install the dependencies:
