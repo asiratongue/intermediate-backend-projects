@@ -1,0 +1,69 @@
+{"Resize" : ResizeImage,
+"Crop" : CropImage,
+"Rotate" : RotateImage,
+"TextWatermark" : TextWatermark,
+"ImageWatermark" : ImageWatermark,
+"FlipImage" : FlipImage,
+"CompressImage" : CompressImage,
+"ChangeFormat" : ChangeFormat,
+"filter" : ApplyFilters}   
+
+
+it either returns an imagemodel, or an image
+
+elif the image is fed back into another transform function, 
+it is checked whether it is an imagemodel or not first, 
+so that it can be converted to a PIL image if it is ; 
+which it always will be if it is the first operation going on . . .
+
+
+now i have a PIL image within the results dictionary, which needs to be used for subsequent transformations, 
+so multiple transformations can be applied at once.
+
+
+
+
+now just fix the changing format
+
+give your code a scroll and check to see if theres anything that could be cleaner
+
+maybe clear the db ?
+error handle and write tests.
+git push + write docs.
+
+
+
+create a seperate feature for querying based on metadata?
+
+request -> retrieve with ORM from db -> get image from s3 -> apply transform function -> save to db -> save to s3 -> return response
+
+request -> retrieve with ORM from db -> retrieve image url if image url in cache - with unique_key else: -> apply transform function -> save to db -> save to s3 -> cache url -> return response
+
+
+
+
+
+test making a request to /get endpoint without a JWT token -> 401
+ 
+test sending an image id that doenst exist to the /transform endpoint
+
+test misspelt image transformation keys to the /transform endpoint.
+
+
+test edge cases for each transformation ;  
+resize by 49405808 , 304242595,
+crop to -304, -349035,
+text watermark with invalid colour, misspelt positioning
+compression to 4059034
+change format to sexsex
+filter to khalabandor
+
+
+Lastly, allow for multiple homogenous operations to be had at once, so two text watermarks at once for example.
+
+closing note: i didnt do the above, as "In JSON, you can't have duplicate keys in the same object - that's why your request with duplicate "Rotate" 
+or "TextWatermark" keys only applies one transformation. To allow multiple of the same transformation, you'll need to structure your JSON differently."
+use a transformation array, is what claude told me to do.
+
+on future projects, where youre dealing with homogenous data, structure your requests to use arrays! not json
+

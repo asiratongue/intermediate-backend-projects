@@ -1,0 +1,16 @@
+curl -X POST http://127.0.0.1:8000/ImageProcessor/register/ \
+     -H "Content-Type: application/json" \
+     -d '{"username": "Killua", "email": "Killua@example.com", "password": "securepassword"}'
+
+curl -X POST http://127.0.0.1:8000/ImageProcessor/register/ \
+     -H "Content-Type: application/json" \
+     -d '{"username": "lua", "email": "Killua@example.com", "password": "securepassword"}'
+
+curl -X POST http://127.0.0.1:8000/ImageProcessor/login/ \
+     -H "Content-Type: application/json" \
+     -d '{"username" : "Killua", "password": "securepassword"}' 
+
+
+curl -X POST http://127.0.0.1:8000/ImageProcessor/login/ \
+     -H "Content-Type: application/json" \
+     -d '{"username" : "lua", "password": "securepassword"}' 

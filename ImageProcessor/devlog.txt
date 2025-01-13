@@ -1,0 +1,11 @@
+
+123> i had to update the bucket policy, under the permissions tab of my imageprocessingbucket2 s3 bucket.
+the bucket policy allows for public access to the images directory for my ImageProcessing app, before, it was returning an access denied error.
+
+124> set the cache in the settings.py file, redis cache.
+
+124> implemented etags for caching unedited images to redis, so faster retrival can be had, and the s3 bucket is only queried once for the initial image retrival.
+had to convert the raw binary image data stored in the s3 cache into a pil image with bytesio. 
+
+125> use the new method SimpleUploadedFile, from django library to test file uploads, use Path also, to create a valid path; learnt a path object has attributes. 
+

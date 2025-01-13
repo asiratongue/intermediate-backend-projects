@@ -1,0 +1,84 @@
+curl -X POST \
+-F "Image=@C://Users//A//Pictures//Cool//Himalayanhero.jpg" \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA3Njc2Njk5LCJpYXQiOjE3MzU2NzY2OTksImp0aSI6ImM1MWZiYWRjZTRiYTRmZDdhODA4YmI1NTM5ZTRjYTI2IiwidXNlcl9pZCI6MX0.qIAc_GJ0fYKnnS8oTfibu2WBTnd_IfmgVUlu-m5q0jo" \
+http://localhost:8000/ImageProcessor/upload/   
+
+
+curl -X GET \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA3Njc2Njk5LCJpYXQiOjE3MzU2NzY2OTksImp0aSI6ImM1MWZiYWRjZTRiYTRmZDdhODA4YmI1NTM5ZTRjYTI2IiwidXNlcl9pZCI6MX0.qIAc_GJ0fYKnnS8oTfibu2WBTnd_IfmgVUlu-m5q0jo" \
+http://localhost:8000/ImageProcessor/list/
+
+curl -X GET \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA3Njc2Njk5LCJpYXQiOjE3MzU2NzY2OTksImp0aSI6ImM1MWZiYWRjZTRiYTRmZDdhODA4YmI1NTM5ZTRjYTI2IiwidXNlcl9pZCI6MX0.qIAc_GJ0fYKnnS8oTfibu2WBTnd_IfmgVUlu-m5q0jo" \
+http://localhost:8000/ImageProcessor/get/16/
+
+curl -X DELETE \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA3Njc2Njk5LCJpYXQiOjE3MzU2NzY2OTksImp0aSI6ImM1MWZiYWRjZTRiYTRmZDdhODA4YmI1NTM5ZTRjYTI2IiwidXNlcl9pZCI6MX0.qIAc_GJ0fYKnnS8oTfibu2WBTnd_IfmgVUlu-m5q0jo" \
+http://localhost:8000/ImageProcessor/remove/22/
+
+curl -X POST \
+http://localhost:8000/ImageProcessor/Transform/1/ \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA3Njc2Njk5LCJpYXQiOjE3MzU2NzY2OTksImp0aSI6ImM1MWZiYWRjZTRiYTRmZDdhODA4YmI1NTM5ZTRjYTI2IiwidXNlcl9pZCI6MX0.qIAc_GJ0fYKnnS8oTfibu2WBTnd_IfmgVUlu-m5q0jo" \
+-H "Content-Type: application/json" \
+-d '{"Resize": {"width": 800, "height": 800}}'
+
+
+curl -X POST \
+http://localhost:8000/ImageProcessor/Transform/1/ \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA3Njc2Njk5LCJpYXQiOjE3MzU2NzY2OTksImp0aSI6ImM1MWZiYWRjZTRiYTRmZDdhODA4YmI1NTM5ZTRjYTI2IiwidXNlcl9pZCI6MX0.qIAc_GJ0fYKnnS8oTfibu2WBTnd_IfmgVUlu-m5q0jo" \
+-H "Content-Type: application/json" \
+-d '{"Crop": {"x": 200, "y": 200, "width" : 500, "height" : 500}}'
+
+curl -X POST \
+http://localhost:8000/ImageProcessor/transform/32/ \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA3Njc2Njk5LCJpYXQiOjE3MzU2NzY2OTksImp0aSI6ImM1MWZiYWRjZTRiYTRmZDdhODA4YmI1NTM5ZTRjYTI2IiwidXNlcl9pZCI6MX0.qIAc_GJ0fYKnnS8oTfibu2WBTnd_IfmgVUlu-m5q0jo" \
+-H "Content-Type: application/json" \
+-d '{"Rotate": 111, "Rotate": 111}'
+ 
+curl -X POST \
+http://localhost:8000/ImageProcessor/transform/32/ \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA3Njc2Njk5LCJpYXQiOjE3MzU2NzY2OTksImp0aSI6ImM1MWZiYWRjZTRiYTRmZDdhODA4YmI1NTM5ZTRjYTI2IiwidXNlcl9pZCI6MX0.qIAc_GJ0fYKnnS8oTfibu2WBTnd_IfmgVUlu-m5q0jo" \
+-H "Content-Type: application/json" \
+-d '{"TextWatermark": {"text" : "yoooo", "colour" :  [106, 90, 205] , "Placement" : "BottomRight"}, "TextWatermark": {"text" : "yoooo", "colour" :  [106, 90, 205] , "Placement" : "TopRight"}}'
+
+curl -X POST \
+http://localhost:8000/ImageProcessor/Transform/1/ \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA3Njc2Njk5LCJpYXQiOjE3MzU2NzY2OTksImp0aSI6ImM1MWZiYWRjZTRiYTRmZDdhODA4YmI1NTM5ZTRjYTI2IiwidXNlcl9pZCI6MX0.qIAc_GJ0fYKnnS8oTfibu2WBTnd_IfmgVUlu-m5q0jo" \
+-H "Content-Type: application/json" \
+-d '{"ImageWatermark": {"Image": "C:\\Users\\A\\Pictures\\Logo\\asmall.png", "Transparency": 60, "Placement" : "TopRight"}}'
+
+
+curl -X POST \
+http://localhost:8000/ImageProcessor/Transform/1/ \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA3Njc2Njk5LCJpYXQiOjE3MzU2NzY2OTksImp0aSI6ImM1MWZiYWRjZTRiYTRmZDdhODA4YmI1NTM5ZTRjYTI2IiwidXNlcl9pZCI6MX0.qIAc_GJ0fYKnnS8oTfibu2WBTnd_IfmgVUlu-m5q0jo" \
+-H "Content-Type: application/json" \
+-d '{"Flip": "Horizontal"}'
+
+curl -X POST \
+http://localhost:8000/ImageProcessor/Transform/1/ \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA3Njc2Njk5LCJpYXQiOjE3MzU2NzY2OTksImp0aSI6ImM1MWZiYWRjZTRiYTRmZDdhODA4YmI1NTM5ZTRjYTI2IiwidXNlcl9pZCI6MX0.qIAc_GJ0fYKnnS8oTfibu2WBTnd_IfmgVUlu-m5q0jo" \
+-H "Content-Type: application/json" \
+-d '{"Compression": 3}'
+
+
+curl -X POST \
+http://localhost:8000/ImageProcessor/transform/32/ \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA3Njc2Njk5LCJpYXQiOjE3MzU2NzY2OTksImp0aSI6ImM1MWZiYWRjZTRiYTRmZDdhODA4YmI1NTM5ZTRjYTI2IiwidXNlcl9pZCI6MX0.qIAc_GJ0fYKnnS8oTfibu2WBTnd_IfmgVUlu-m5q0jo" \
+-H "Content-Type: application/json" \
+-d '{"ChangeFormat": "pnasdg"}'
+
+
+curl -X POST \
+http://localhost:8000/ImageProcessor/Transform/1/ \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA3Njc2Njk5LCJpYXQiOjE3MzU2NzY2OTksImp0aSI6ImM1MWZiYWRjZTRiYTRmZDdhODA4YmI1NTM5ZTRjYTI2IiwidXNlcl9pZCI6MX0.qIAc_GJ0fYKnnS8oTfibu2WBTnd_IfmgVUlu-m5q0jo" \
+-H "Content-Type: application/json" \
+-d '{"Filter": "HighContrast"}'
+
+
+
+
+curl -X POST \
+http://localhost:8000/ImageProcessor/Transform/1/ \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA3Njc2Njk5LCJpYXQiOjE3MzU2NzY2OTksImp0aSI6ImM1MWZiYWRjZTRiYTRmZDdhODA4YmI1NTM5ZTRjYTI2IiwidXNlcl9pZCI6MX0.qIAc_GJ0fYKnnS8oTfibu2WBTnd_IfmgVUlu-m5q0jo" \
+-H "Content-Type: application/json" \
+-d '{"Crop": {"x": 200, "y": 200, "width" : 500, "height" : 500}, "Rotate": 84}'
