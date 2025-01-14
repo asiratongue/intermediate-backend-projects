@@ -1,0 +1,38 @@
+# Django
+__pycache__/
+*.py[cod]
+db.sqlite3
+media/
+*.log
+local_settings.py
+
+# Environment 
+.env
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# AWS
+aws_credentials.py
+config.ini
+*.pem
+
+# Project specific
+*.jpg
+*.png
+*.gif
+data/
+node_modules/
+
+# Server
+*.pid
+*.sock
+
+# Misc
+.DS_Store
+devlog.txt
+notes.txt
+Falkirk_accessKeys.csv
