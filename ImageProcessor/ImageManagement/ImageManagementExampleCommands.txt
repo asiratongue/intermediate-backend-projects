@@ -29,7 +29,7 @@ http://localhost:8000/ImageProcessor/Transform/1/ \
 -H "Content-Type: application/json" \
 -d '{"Crop": {"x": 200, "y": 200, "width" : 500, "height" : 500}}'
 
-curl -X POST \
+curl -X POST \ 
 http://localhost:8000/ImageProcessor/transform/32/ \
 -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA3Njc2Njk5LCJpYXQiOjE3MzU2NzY2OTksImp0aSI6ImM1MWZiYWRjZTRiYTRmZDdhODA4YmI1NTM5ZTRjYTI2IiwidXNlcl9pZCI6MX0.qIAc_GJ0fYKnnS8oTfibu2WBTnd_IfmgVUlu-m5q0jo" \
 -H "Content-Type: application/json" \
@@ -58,7 +58,7 @@ curl -X POST \
 http://localhost:8000/ImageProcessor/Transform/1/ \
 -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA3Njc2Njk5LCJpYXQiOjE3MzU2NzY2OTksImp0aSI6ImM1MWZiYWRjZTRiYTRmZDdhODA4YmI1NTM5ZTRjYTI2IiwidXNlcl9pZCI6MX0.qIAc_GJ0fYKnnS8oTfibu2WBTnd_IfmgVUlu-m5q0jo" \
 -H "Content-Type: application/json" \
--d '{"Compression": 3}'
+-d '{" ": 3}'
 
 
 curl -X POST \

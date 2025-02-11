@@ -1,0 +1,6 @@
+# .gitignore
+
+**/.env
+**/DEV LOG.md
+__pycache__/
+*.pyc

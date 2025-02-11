@@ -1,0 +1,79 @@
+curl -X GET http://127.0.0.1:8000/PrinceCharles/viewall/ \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA5MDU4ODkwLCJpYXQiOjE3MzcwNTg4OTAsImp0aSI6IjlkN2U4YzZlN2QyZDRmMGM5ZTAyMGM4NjJmZTFhNjJjIiwidXNlcl9pZCI6Mn0.w42SuxtU3pbdPWFl8a7u83HP-ResQwYE5lxD4mOVd2c"
+
+
+
+
+curl -X GET http://127.0.0.1:8000/PrinceCharles/view/6/ \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA5MDU4ODkwLCJpYXQiOjE3MzcwNTg4OTAsImp0aSI6IjlkN2U4YzZlN2QyZDRmMGM5ZTAyMGM4NjJmZTFhNjJjIiwidXNlcl9pZCI6Mn0.w42SuxtU3pbdPWFl8a7u83HP-ResQwYE5lxD4mOVd2c"
+
+
+
+curl -X GET http://127.0.0.1:8000/PrinceCharles/viewavailable/13/ \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA5MDU4ODkwLCJpYXQiOjE3MzcwNTg4OTAsImp0aSI6IjlkN2U4YzZlN2QyZDRmMGM5ZTAyMGM4NjJmZTFhNjJjIiwidXNlcl9pZCI6Mn0.w42SuxtU3pbdPWFl8a7u83HP-ResQwYE5lxD4mOVd2c"
+
+
+
+
+curl -X GET http://127.0.0.1:8000/PrinceCharles/viewscreenings/ \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA5MDU4ODkwLCJpYXQiOjE3MzcwNTg4OTAsImp0aSI6IjlkN2U4YzZlN2QyZDRmMGM5ZTAyMGM4NjJmZTFhNjJjIiwidXNlcl9pZCI6Mn0.w42SuxtU3pbdPWFl8a7u83HP-ResQwYE5lxD4mOVd2c"
+
+
+
+
+curl -X GET http://127.0.0.1:8000/PrinceCharles/viewscreenings/?date=2025-02-21 \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA5MDU4ODkwLCJpYXQiOjE3MzcwNTg4OTAsImp0aSI6IjlkN2U4YzZlN2QyZDRmMGM5ZTAyMGM4NjJmZTFhNjJjIiwidXNlcl9pZCI6Mn0.w42SuxtU3pbdPWFl8a7u83HP-ResQwYE5lxD4mOVd2c"
+
+
+
+
+curl -X GET http://127.0.0.1:8000/PrinceCharles/viewscreenings/?movie=Pap \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA5MDU4ODkwLCJpYXQiOjE3MzcwNTg4OTAsImp0aSI6IjlkN2U4YzZlN2QyZDRmMGM5ZTAyMGM4NjJmZTFhNjJjIiwidXNlcl9pZCI6Mn0.w42SuxtU3pbdPWFl8a7u83HP-ResQwYE5lxD4mOVd2c"
+
+
+
+
+curl -X GET "http://127.0.0.1:8000/PrinceCharles/viewscreenings/?movie=The&date=2025-01-21" \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA5MDU4ODkwLCJpYXQiOjE3MzcwNTg4OTAsImp0aSI6IjlkN2U4YzZlN2QyZDRmMGM5ZTAyMGM4NjJmZTFhNjJjIiwidXNlcl9pZCI6Mn0.w42SuxtU3pbdPWFl8a7u83HP-ResQwYE5lxD4mOVd2c"
+
+
+
+curl -X POST http://127.0.0.1:8000/PrinceCharles/reserve/8/ \
+ -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODEwNjA3OTM4LCJpYXQiOjE3Mzg2MDc5MzgsImp0aSI6ImM5MmQ5YzE2NGQ5NjQ1MmY5ZWNjZmYzMjM2YWFjZjM2IiwidXNlcl9pZCI6M30.TrmED43VXFkq5AXv5zORvVbauK86sGAbURkkTx71Cfw" \
+ -H "Content-Type: application/json" \
+ -d '{"seats": ["C1", "F3", "I4"]}'
+
+
+curl -X POST http://127.0.0.1:8000/PrinceCharles/reserve/1/ \
+ -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODEwNjA3OTM4LCJpYXQiOjE3Mzg2MDc5MzgsImp0aSI6ImM5MmQ5YzE2NGQ5NjQ1MmY5ZWNjZmYzMjM2YWFjZjM2IiwidXNlcl9pZCI6M30.TrmED43VXFkq5AXv5zORvVbauK86sGAbURkkTx71Cfw" \
+ -H "Content-Type: application/json" \
+ -d '{"seats": ["A1"]}'
+
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODEwNjA3OTM4LCJpYXQiOjE3Mzg2MDc5MzgsImp0aSI6ImM5MmQ5YzE2NGQ5NjQ1MmY5ZWNjZmYzMjM2YWFjZjM2IiwidXNlcl9pZCI6M30.TrmED43VXFkq5AXv5zORvVbauK86sGAbURkkTx71Cfw
+
+curl -X GET http://127.0.0.1:8000/PrinceCharles/viewtickets/ \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA5MDU4ODkwLCJpYXQiOjE3MzcwNTg4OTAsImp0aSI6IjlkN2U4YzZlN2QyZDRmMGM5ZTAyMGM4NjJmZTFhNjJjIiwidXNlcl9pZCI6Mn0.w42SuxtU3pbdPWFl8a7u83HP-ResQwYE5lxD4mOVd2c"
+
+
+
+
+curl -X PATCH http://127.0.0.1:8000/PrinceCharles/cancel/11/ \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODEwNjA3OTM4LCJpYXQiOjE3Mzg2MDc5MzgsImp0aSI6ImM5MmQ5YzE2NGQ5NjQ1MmY5ZWNjZmYzMjM2YWFjZjM2IiwidXNlcl9pZCI6M30.TrmED43VXFkq5AXv5zORvVbauK86sGAbURkkTx71Cfw"
+
+
+
+
+curl -X PATCH http://127.0.0.1:8000/PrinceCharles/cancel/5/ \
+ -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA5MDU4ODkwLCJpYXQiOjE3MzcwNTg4OTAsImp0aSI6IjlkN2U4YzZlN2QyZDRmMGM5ZTAyMGM4NjJmZTFhNjJjIiwidXNlcl9pZCI6Mn0.w42SuxtU3pbdPWFl8a7u83HP-ResQwYE5lxD4mOVd2c" \
+ -H "Content-Type: application/json" \
+ -d '{"cancel": ["C3", "H1"]}'
+
+
+
+curl -X GET "http://127.0.0.1:8000/PrinceCharles/report/all/" \
+     -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODEwNTA3NTYyLCJpYXQiOjE3Mzg1MDc1NjIsImp0aSI6IjA0NzdkNmQ5YjNiZjQ5NGViOGI1ZTMwZmY1NTZmOTM3IiwidXNlcl9pZCI6MX0.ifncqt8vRtU76xO_U13HYDLS3UYomz1cIaf-8YHmOJ4"
+
+
+curl -X GET "http://127.0.0.1:8000/PrinceCharles/report/2/" \
+     -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODEwNTA3NTYyLCJpYXQiOjE3Mzg1MDc1NjIsImp0aSI6IjA0NzdkNmQ5YjNiZjQ5NGViOGI1ZTMwZmY1NTZmOTM3IiwidXNlcl9pZCI6MX0.ifncqt8vRtU76xO_U13HYDLS3UYomz1cIaf-8YHmOJ4"

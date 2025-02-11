@@ -1,0 +1,40 @@
+curl -X POST http://127.0.0.1:8000/PrinceCharles/register/ \
+     -H "Content-Type: application/json" \
+     -d '{"username": "Killua", "email": "Killua@example.com", "password": "securepassword"}'
+
+curl -X POST http://127.0.0.1:8000/PrinceCharles/register/ \
+     -H "Content-Type: application/json" \
+     -d '{"username": "lua", "email": "Killua@example.com", "password": "securepassword"}'
+
+curl -X POST http://127.0.0.1:8000/PrinceCharles/login/ \
+     -H "Content-Type: application/json" \
+     -d '{"username" : "Killua", "password": "securepassword"}' 
+
+
+curl -X POST http://127.0.0.1:8000/PrinceCharles/login/ \
+     -H "Content-Type: application/json" \
+     -d '{"username" : "lua", "password": "securepassword"}' 
+
+
+curl -X POST http://127.0.0.1:8000/PrinceCharles/login/ \
+     -H "Content-Type: application/json" \
+     -d '{"username" : "Asim", "password": "Abundanc3!"}' 
+
+
+
+
+Killua Token 
+"tokens":{"refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0MDUxNDg5MCwiaWF0IjoxNzM3MDU4ODkwLCJqdGkiOiI3NmUwYTVjMTBmZWQ0NzNlYjc4ZTY0MmQyYjNiZmYxZiIsInVzZXJfaWQiOjJ9.ITmTayxjVGlMc-zDA3sbZrlXGrSwn8QbFafc9xDsZj4",
+"access":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODA5MDU4ODkwLCJpYXQiOjE3MzcwNTg4OTAsImp0aSI6IjlkN2U4YzZlN2QyZDRmMGM5ZTAyMGM4NjJmZTFhNjJjIiwidXNlcl9pZCI6Mn0.w42SuxtU3pbdPWFl8a7u83HP-ResQwYE5lxD4mOVd2c"}}
+
+
+
+Admin Token 
+{"refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0MTk2MzU2MiwiaWF0IjoxNzM4NTA3NTYyLCJqdGkiOiJiOGI4ZWVjMDEyODk0MzZlOWRmYzcxNDIzMDA3MjgzYyIsInVzZXJfaWQiOjF9.I4JQYMW_WSwtRADPqZUJiuwpz2ihMdjkPwYE6n1AfvQ",
+"access":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODEwNTA3NTYyLCJpYXQiOjE3Mzg1MDc1NjIsImp0aSI6IjA0NzdkNmQ5YjNiZjQ5NGViOGI1ZTMwZmY1NTZmOTM3IiwidXNlcl9pZCI6MX0.ifncqt8vRtU76xO_U13HYDLS3UYomz1cIaf-8YHmOJ4"}}
+
+
+
+Lua Token
+{"refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0MjA2MzkzOCwiaWF0IjoxNzM4NjA3OTM4LCJqdGkiOiIzZTY1NzU4Y2ZkYWI0ZDhkODhiMjI0ZmYwODRhYTBlNiIsInVzZXJfaWQiOjN9.Yh6fnldtfAdwZ9j77ODPw4V5r8gn-X4RnzWZd_SH2Mc",
+"access":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODEwNjA3OTM4LCJpYXQiOjE3Mzg2MDc5MzgsImp0aSI6ImM5MmQ5YzE2NGQ5NjQ1MmY5ZWNjZmYzMjM2YWFjZjM2IiwidXNlcl9pZCI6M30.TrmED43VXFkq5AXv5zORvVbauK86sGAbURkkTx71Cfw"}}

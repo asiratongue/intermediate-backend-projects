@@ -1,0 +1,4 @@
+b2c44d7b8d2046e08a322499c5d13680
+
+WARNING: You did not specify a password for the postgres user so an insecure one has been generated for you. Please change it immediately.
+

@@ -1,0 +1,1193 @@
+[
+  {
+    "model": "MovieReservations.genre",
+    "pk": 1,
+    "fields": {
+      "name": "Romance"
+    }
+  },
+  {
+    "model": "MovieReservations.genre",
+    "pk": 2,
+    "fields": {
+      "name": "Comedy"
+    }
+  },
+  {
+    "model": "MovieReservations.genre",
+    "pk": 3,
+    "fields": {
+      "name": "Thriller"
+    }
+  },
+  {
+    "model": "MovieReservations.genre",
+    "pk": 4,
+    "fields": {
+      "name": "Action"
+    }
+  },
+  {
+    "model": "MovieReservations.genre",
+    "pk": 5,
+    "fields": {
+      "name": "Mystery"
+    }
+  },
+  {
+    "model": "MovieReservations.genre",
+    "pk": 6,
+    "fields": {
+      "name": "Anime"
+    }
+  },
+  {
+    "model": "MovieReservations.genre",
+    "pk": 7,
+    "fields": {
+      "name": "Film Noir"
+    }
+  },
+  {
+    "model": "MovieReservations.genre",
+    "pk": 8,
+    "fields": {
+      "name": "Crime"
+    }
+  },
+  {
+    "model": "MovieReservations.genre",
+    "pk": 9,
+    "fields": {
+      "name": "Science Fiction"
+    }
+  },
+  {
+    "model": "MovieReservations.movie",
+    "pk": 1,
+    "fields": {
+      "title": "The Seven Year Itch",
+      "description": "In the midst of a summer heat wave, New Yorker Richard Sherman (Tom Ewell) ships his wife, Helen (Evelyn Keyes), and their son off to Maine for vacation. Left alone to work back in Manhattan, Richard encounters a gorgeous blonde model (Marilyn Monroe) who has moved into the apartment upstairs, and becomes immediately infatuated. While pondering infidelity, Richard dreams of his beautiful new neighbor -- but will his fantasies about her become a reality?",
+      "poster": "Posters/thesevenyearitch.jpg",
+      "date_released": 1955,
+      "genre": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "MovieReservations.movie",
+    "pk": 2,
+    "fields": {
+      "title": "Spartacus",
+      "description": "Thracian Spartacus, who was born and raised a slave, rebels against the atrocities that his owners inflict upon him. However, his life changes when he is sold to gladiator trainer Batiatus.",
+      "poster": "Posters/spartacus.jpg",
+      "date_released": 1960,
+      "genre": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "model": "MovieReservations.movie",
+    "pk": 3,
+    "fields": {
+      "title": "The Big Sleep",
+      "description": "Private investigator Philip Marlowe (Humphrey Bogart) is hired by General Sternwood to help resolve the gambling debts of his wild young daughter, Carmen (Martha Vickers). Sternwood's older daughter, Vivian (Lauren Bacall), provides assistance when she implies that the situation is more complex, and also involves casino owner (John Ridgely) and a recently disappeared family friend. As people linked to the Sternwoods start being murdered, Marlowe finds himself getting ever deeper into the case.",
+      "poster": "Posters/thebigsleep.jpg",
+      "date_released": 1946,
+      "genre": [
+        1,
+        7
+      ]
+    }
+  },
+  {
+    "model": "MovieReservations.movie",
+    "pk": 4,
+    "fields": {
+      "title": "Fargo",
+      "description": "Minnesota car salesman Jerry Lundegaard's inept crime falls apart due to his and his henchmen's bungling and the persistent police work of the quite pregnant Marge Gunderson.",
+      "poster": "Posters/fargo.jpg",
+      "date_released": 1996,
+      "genre": [
+        8,
+        2
+      ]
+    }
+  },
+  {
+    "model": "MovieReservations.movie",
+    "pk": 5,
+    "fields": {
+      "title": "Blue Velvet",
+      "description": "College student Jeffrey Beaumont (Kyle MacLachlan) returns home after his father has a stroke. When he discovers a severed ear in an abandoned field, Beaumont teams up with detective's daughter Sandy Williams (Laura Dern) to solve the mystery. They believe beautiful lounge singer Dorothy Vallens (Isabella Rossellini) may be connected with the case, and Beaumont finds himself becoming drawn into her dark, twisted world, where he encounters sexually depraved psychopath Frank Booth (Dennis Hopper)",
+      "poster": "Posters/bluevelvet.jpg",
+      "date_released": 1986,
+      "genre": [
+        7
+      ]
+    }
+  },
+  {
+    "model": "MovieReservations.movie",
+    "pk": 6,
+    "fields": {
+      "title": "Mulholland Drive",
+      "description": "A woman in search of stardom. A woman in search of herself - in the city of dreams. A key to a mystery lies somewhere on Mulholland Drive.",
+      "poster": "Posters/mulhollanddrive.jpg",
+      "date_released": 2005,
+      "genre": [
+        7
+      ]
+    }
+  },
+  {
+    "model": "MovieReservations.movie",
+    "pk": 7,
+    "fields": {
+      "title": "In The Mood For Love",
+      "description": "In Hong Kong of 1962, Mrs. Chan and Mr. Chow, a journalist, move into neighbouring apartments on the same day. Their encounters are formal and politeùuntil a discovery about their respective spouses creates an intimate bond between them.",
+      "poster": "Posters/inthemoodforlove.jpg",
+      "date_released": 2000,
+      "genre": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "MovieReservations.movie",
+    "pk": 8,
+    "fields": {
+      "title": "Ghost in the Shell",
+      "description": "In this Japanese animation, cyborg federal agent Maj. Motoko Kusanagi (Mimi Woods) trails The Puppet Master (Abe Lasser), who illegally hacks into the computerized minds of cyborg-human hybrids. Her pursuit of a man who can modify the identity of strangers leaves Motoko pondering her own makeup and what life might be like if she had more human traits. With her partner (Richard George), she corners the hacker, but her curiosity about her identity sends the case in an unforeseen direction.",
+      "poster": "Posters/ghostintheshell.jpg",
+      "date_released": 1995,
+      "genre": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "MovieReservations.movie",
+    "pk": 9,
+    "fields": {
+      "title": "Interstellar",
+      "description": "In Earth's future, a global crop blight and second Dust Bowl are slowly rendering the planet uninhabitable. Professor Brand (Michael Caine), a brilliant NASA physicist, is working on plans to save mankind by transporting Earth's population to a new home via a wormhole. But first, Brand must send former NASA pilot Cooper (Matthew McConaughey) and a team of researchers through the wormhole and across the galaxy to find out which of three planets could be mankind's new home.",
+      "poster": "Posters/interstellar.jpg",
+      "date_released": 2014,
+      "genre": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "MovieReservations.movie",
+    "pk": 10,
+    "fields": {
+      "title": "Paprika",
+      "description": "When a machine that allows therapists to enter their patients' dreams is stolen, all hell breaks loose. Only a young female therapist, Paprika, can stop it.",
+      "poster": "Posters/paprika.jpg",
+      "date_released": 2006,
+      "genre": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "MovieReservations.movie",
+    "pk": 11,
+    "fields": {
+      "title": "American Psycho",
+      "description": "A wealthy New York investment banking executive hides his alternate psychopathic ego from his co-workers and friends as he escalates deeper into his illogical, gratuitous fantasies.",
+      "poster": "Posters/americanpsycho.jpg",
+      "date_released": 2000,
+      "genre": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "model": "MovieReservations.moviescreening",
+    "pk": 1,
+    "fields": {
+      "movie": 11,
+      "showtime": "2025-02-17T19:30:00Z",
+      "seats_left": 100,
+      "valid": true
+    }
+  },
+  {
+    "model": "MovieReservations.moviescreening",
+    "pk": 2,
+    "fields": {
+      "movie": 10,
+      "showtime": "2025-02-07T20:00:00Z",
+      "seats_left": 98,
+      "valid": true
+    }
+  },
+  {
+    "model": "MovieReservations.moviescreening",
+    "pk": 3,
+    "fields": {
+      "movie": 9,
+      "showtime": "2025-02-09T17:15:00Z",
+      "seats_left": 97,
+      "valid": true
+    }
+  },
+  {
+    "model": "MovieReservations.moviescreening",
+    "pk": 4,
+    "fields": {
+      "movie": 8,
+      "showtime": "2025-02-11T18:45:00Z",
+      "seats_left": 100,
+      "valid": true
+    }
+  },
+  {
+    "model": "MovieReservations.moviescreening",
+    "pk": 5,
+    "fields": {
+      "movie": 7,
+      "showtime": "2025-02-14T21:00:00Z",
+      "seats_left": 100,
+      "valid": true
+    }
+  },
+  {
+    "model": "MovieReservations.moviescreening",
+    "pk": 6,
+    "fields": {
+      "movie": 6,
+      "showtime": "2025-02-16T15:00:00Z",
+      "seats_left": 100,
+      "valid": true
+    }
+  },
+  {
+    "model": "MovieReservations.moviescreening",
+    "pk": 7,
+    "fields": {
+      "movie": 4,
+      "showtime": "2025-02-19T19:00:00Z",
+      "seats_left": 100,
+      "valid": true
+    }
+  },
+  {
+    "model": "MovieReservations.moviescreening",
+    "pk": 8,
+    "fields": {
+      "movie": 4,
+      "showtime": "2025-02-21T20:30:00Z",
+      "seats_left": 100,
+      "valid": true
+    }
+  },
+  {
+    "model": "MovieReservations.moviescreening",
+    "pk": 9,
+    "fields": {
+      "movie": 5,
+      "showtime": "2025-02-23T16:30:00Z",
+      "seats_left": 100,
+      "valid": true
+    }
+  },
+  {
+    "model": "MovieReservations.moviescreening",
+    "pk": 10,
+    "fields": {
+      "movie": 3,
+      "showtime": "2025-02-25T18:30:00Z",
+      "seats_left": 100,
+      "valid": true
+    }
+  },
+  {
+    "model": "MovieReservations.moviescreening",
+    "pk": 11,
+    "fields": {
+      "movie": 2,
+      "showtime": "2025-02-28T19:45:00Z",
+      "seats_left": 100,
+      "valid": true
+    }
+  },
+  {
+    "model": "MovieReservations.moviescreening",
+    "pk": 12,
+    "fields": {
+      "movie": 1,
+      "showtime": "2025-02-18T20:00:00Z",
+      "seats_left": 100,
+      "valid": true
+    }
+  },
+  {
+    "model": "MovieReservations.moviescreening",
+    "pk": 13,
+    "fields": {
+      "movie": 8,
+      "showtime": "2025-02-04T20:50:00Z",
+      "seats_left": 98,
+      "valid": false
+    }
+  },
+  {
+    "model": "MovieReservations.moviescreening",
+    "pk": 14,
+    "fields": {
+      "movie": 6,
+      "showtime": "2025-02-05T07:58:00Z",
+      "seats_left": 98,
+      "valid": true
+    }
+  },
+  {
+    "model": "MovieReservations.moviescreening",
+    "pk": 15,
+    "fields": {
+      "movie": 4,
+      "showtime": "2025-02-05T09:44:15Z",
+      "seats_left": 97,
+      "valid": false
+    }
+  },
+  {
+    "model": "MovieReservations.moviescreening",
+    "pk": 16,
+    "fields": {
+      "movie": 6,
+      "showtime": "2025-02-05T09:49:33Z",
+      "seats_left": 97,
+      "valid": true
+    }
+  },
+  {
+    "model": "MovieReservations.moviescreening",
+    "pk": 17,
+    "fields": {
+      "movie": 5,
+      "showtime": "2025-02-05T09:54:43Z",
+      "seats_left": 97,
+      "valid": false
+    }
+  },
+  {
+    "model": "MovieReservations.moviescreening",
+    "pk": 18,
+    "fields": {
+      "movie": 10,
+      "showtime": "2025-02-05T10:03:12Z",
+      "seats_left": 97,
+      "valid": false
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 1,
+    "fields": {
+      "seat": "A1",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 2,
+    "fields": {
+      "seat": "A2",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 3,
+    "fields": {
+      "seat": "A3",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 4,
+    "fields": {
+      "seat": "A4",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 5,
+    "fields": {
+      "seat": "A5",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 6,
+    "fields": {
+      "seat": "A6",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 7,
+    "fields": {
+      "seat": "A7",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 8,
+    "fields": {
+      "seat": "A8",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 9,
+    "fields": {
+      "seat": "A9",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 10,
+    "fields": {
+      "seat": "A10",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 11,
+    "fields": {
+      "seat": "B1",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 12,
+    "fields": {
+      "seat": "B2",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 13,
+    "fields": {
+      "seat": "B3",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 14,
+    "fields": {
+      "seat": "B4",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 15,
+    "fields": {
+      "seat": "B5",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 16,
+    "fields": {
+      "seat": "B6",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 17,
+    "fields": {
+      "seat": "B7",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 18,
+    "fields": {
+      "seat": "B8",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 19,
+    "fields": {
+      "seat": "B9",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 20,
+    "fields": {
+      "seat": "B10",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 21,
+    "fields": {
+      "seat": "C1",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 22,
+    "fields": {
+      "seat": "C2",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 23,
+    "fields": {
+      "seat": "C3",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 24,
+    "fields": {
+      "seat": "C4",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 25,
+    "fields": {
+      "seat": "C5",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 26,
+    "fields": {
+      "seat": "C6",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 27,
+    "fields": {
+      "seat": "C7",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 28,
+    "fields": {
+      "seat": "C8",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 29,
+    "fields": {
+      "seat": "C9",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 30,
+    "fields": {
+      "seat": "C10",
+      "seat_type": "luxury class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 31,
+    "fields": {
+      "seat": "D1",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 32,
+    "fields": {
+      "seat": "D2",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 33,
+    "fields": {
+      "seat": "D3",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 34,
+    "fields": {
+      "seat": "D4",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 35,
+    "fields": {
+      "seat": "D5",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 36,
+    "fields": {
+      "seat": "D6",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 37,
+    "fields": {
+      "seat": "D7",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 38,
+    "fields": {
+      "seat": "D8",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 39,
+    "fields": {
+      "seat": "D9",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 40,
+    "fields": {
+      "seat": "D10",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 41,
+    "fields": {
+      "seat": "E1",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 42,
+    "fields": {
+      "seat": "E2",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 43,
+    "fields": {
+      "seat": "E3",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 44,
+    "fields": {
+      "seat": "E4",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 45,
+    "fields": {
+      "seat": "E5",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 46,
+    "fields": {
+      "seat": "E6",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 47,
+    "fields": {
+      "seat": "E7",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 48,
+    "fields": {
+      "seat": "E8",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 49,
+    "fields": {
+      "seat": "E9",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 50,
+    "fields": {
+      "seat": "E10",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 51,
+    "fields": {
+      "seat": "F1",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 52,
+    "fields": {
+      "seat": "F2",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 53,
+    "fields": {
+      "seat": "F3",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 54,
+    "fields": {
+      "seat": "F4",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 55,
+    "fields": {
+      "seat": "F5",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 56,
+    "fields": {
+      "seat": "F6",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 57,
+    "fields": {
+      "seat": "F7",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 58,
+    "fields": {
+      "seat": "F8",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 59,
+    "fields": {
+      "seat": "F9",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 60,
+    "fields": {
+      "seat": "F10",
+      "seat_type": "midwit class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 61,
+    "fields": {
+      "seat": "G1",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 62,
+    "fields": {
+      "seat": "G2",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 63,
+    "fields": {
+      "seat": "G3",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 64,
+    "fields": {
+      "seat": "G4",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 65,
+    "fields": {
+      "seat": "G5",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 66,
+    "fields": {
+      "seat": "G6",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 67,
+    "fields": {
+      "seat": "G7",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 68,
+    "fields": {
+      "seat": "G8",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 69,
+    "fields": {
+      "seat": "G9",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 70,
+    "fields": {
+      "seat": "G10",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 71,
+    "fields": {
+      "seat": "H1",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 72,
+    "fields": {
+      "seat": "H2",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 73,
+    "fields": {
+      "seat": "H3",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 74,
+    "fields": {
+      "seat": "H4",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 75,
+    "fields": {
+      "seat": "H5",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 76,
+    "fields": {
+      "seat": "H6",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 77,
+    "fields": {
+      "seat": "H7",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 78,
+    "fields": {
+      "seat": "H8",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 79,
+    "fields": {
+      "seat": "H9",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 80,
+    "fields": {
+      "seat": "H10",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 81,
+    "fields": {
+      "seat": "I1",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 82,
+    "fields": {
+      "seat": "I2",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 83,
+    "fields": {
+      "seat": "I3",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 84,
+    "fields": {
+      "seat": "I4",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 85,
+    "fields": {
+      "seat": "I5",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 86,
+    "fields": {
+      "seat": "I6",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 87,
+    "fields": {
+      "seat": "I7",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 88,
+    "fields": {
+      "seat": "I8",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 89,
+    "fields": {
+      "seat": "I9",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 90,
+    "fields": {
+      "seat": "I10",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 91,
+    "fields": {
+      "seat": "J1",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 92,
+    "fields": {
+      "seat": "J2",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 93,
+    "fields": {
+      "seat": "J3",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 94,
+    "fields": {
+      "seat": "J4",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 95,
+    "fields": {
+      "seat": "J5",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 96,
+    "fields": {
+      "seat": "J6",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 97,
+    "fields": {
+      "seat": "J7",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 98,
+    "fields": {
+      "seat": "J8",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 99,
+    "fields": {
+      "seat": "J9",
+      "seat_type": "ghetto class"
+    }
+  },
+  {
+    "model": "MovieReservations.stdseatingplan",
+    "pk": 100,
+    "fields": {
+      "seat": "J10",
+      "seat_type": "ghetto class"
+    }
+  }
+]
