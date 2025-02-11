@@ -1,9 +1,9 @@
 The Movie Reservation System is a backend API which allows users to register, sign in, reserve, view, and cancel seats for their chosen movie screenings. Duplicate bookings, as well as different pricing structures, cinema seating structures, and transaction logic is all handled effectively. Admins are given access to two further endpoints, which generate reports on overall business performance and specific Movie Screenings. Admins are given access to an admin control panel (standard Django Admin page), which allows  them to create and edit new movie screenings, add new movies and genres to the database, as well as view all revenue, transactions, and users who are signed up on the app.
 
-Built with Django + Django REST Framework, Amazon AWS for database + cloud storage, utilising Postgresql.  
+Built with Django + Django REST Framework, Amazon AWS for database + cloud storage, utilising PostgreSQL.  
 
 
-#### **to run and test on windows** 
+#### **To run and test on Windows** 
 
 1) Clone the repo with svn:  
    `svn export https://github.com/asiratongue/intermediate-backend-projects/tree/main/MovieReservationSystem`
@@ -15,7 +15,8 @@ Built with Django + Django REST Framework, Amazon AWS for database + cloud stora
 3) Install the dependencies from terminal with:  
 `pip install -r requirements.txt`
 
-4) Set up a .env file with your AWS s3 bucket credentials, eg:
+4) Set up a .env file with your AWS S3 bucket credentials,  
+   eg:
  
     `# .env`
     `AWS_ACCESS_KEY_ID='YOUR_ACCESS_KEY_ID'`    
@@ -24,7 +25,7 @@ Built with Django + Django REST Framework, Amazon AWS for database + cloud stora
     `AWS_S3_REGION_NAME='YOUR_AWS_S3_REGION_NAME'`
 
 
-5) configure database settings for Django and AWS in your .env:  
+6) configure database settings for Django and AWS in your .env:  
 	
 	`# .env`
 	`DB_NAME='your_database_name' 
@@ -33,7 +34,7 @@ Built with Django + Django REST Framework, Amazon AWS for database + cloud stora
 	`DB_HOST='your-aws-rds-endpoint.region.rds.amazonaws.com' 
 	`DB_PORT='5432' `
 
-6) start the django app:  
+7) start the django app:  
 `python manage.py runserver`
 
 
