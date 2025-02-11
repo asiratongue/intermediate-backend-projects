@@ -2,4 +2,6 @@
 
 **/.env
 **/DEV LOG.md
+postgrespass.txt
+db.sqlite3
 
