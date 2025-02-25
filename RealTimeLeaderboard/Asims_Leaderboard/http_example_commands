@@ -1,0 +1,52 @@
+
+curl -X GET http://127.0.0.1:8000/AsimsLeaderboard/viewgames/ \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODExMzUwNTM0LCJpYXQiOjE3MzkzNTA1MzQsImp0aSI6ImUwODRkY2ZmYTcwOTRlNjg5YzNkMzgwZmJiNWY1ZGJhIiwidXNlcl9pZCI6Mn0.I3nmHyMFcUygDpqPY5ZNYkSV5DQAdJk6v9TaLvIdaPQ"
+
+
+curl -X POST "http://127.0.0.1:8000/AsimsLeaderboard/submit/3/" \
+     -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODExNDM1MTYzLCJpYXQiOjE3Mzk0MzUxNjMsImp0aSI6IjIzZmEwM2E2ZDJhNTQxNmI4N2I2YTY4YzVlODA1YTcxIiwidXNlcl9pZCI6NH0.vVQSBt3TSsjKYON8yc8IYutYo9SJGgwfkvPMzeZF-Us" \
+     -H "Content-Type: application/json" \
+     --data '{"score": {"wins": 13, "losses": 5}}'
+
+
+view/game/<int:id>/score
+
+
+view/global/score/
+
+
+curl -X GET http://127.0.0.1:8000/AsimsLeaderboard/view/global/score/ \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODExMzUwNTM0LCJpYXQiOjE3MzkzNTA1MzQsImp0aSI6ImUwODRkY2ZmYTcwOTRlNjg5YzNkMzgwZmJiNWY1ZGJhIiwidXNlcl9pZCI6Mn0.I3nmHyMFcUygDpqPY5ZNYkSV5DQAdJk6v9TaLvIdaPQ"
+ -H "Content-Type: application/json" \
+
+curl -X GET http://127.0.0.1:8000/AsimsLeaderboard/view/game/5/score/ \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODExNDM1MTYzLCJpYXQiOjE3Mzk0MzUxNjMsImp0aSI6IjIzZmEwM2E2ZDJhNTQxNmI4N2I2YTY4YzVlODA1YTcxIiwidXNlcl9pZCI6NH0.vVQSBt3TSsjKYON8yc8IYutYo9SJGgwfkvPMzeZF-Us"
+ -H "Content-Type: application/json" \
+
+
+curl -X GET "http://127.0.0.1:8000/AsimsLeaderboard/view/report/all/?datefrom=2025-01-01&dateto=2025-01-25" \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODExMzUwNTM0LCJpYXQiOjE3MzkzNTA1MzQsImp0aSI6ImUwODRkY2ZmYTcwOTRlNjg5YzNkMzgwZmJiNWY1ZGJhIiwidXNlcl9pZCI6Mn0.I3nmHyMFcUygDpqPY5ZNYkSV5DQAdJk6v9TaLvIdaPQ" \
+-H "Content-Type: application/json"
+
+
+curl -X GET "http://127.0.0.1:8000/AsimsLeaderboard/view/report/3/?datefrom=2025-01-01&dateto=2025-01-25" \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODExMzUwNTM0LCJpYXQiOjE3MzkzNTA1MzQsImp0aSI6ImUwODRkY2ZmYTcwOTRlNjg5YzNkMzgwZmJiNWY1ZGJhIiwidXNlcl9pZCI6Mn0.I3nmHyMFcUygDpqPY5ZNYkSV5DQAdJk6v9TaLvIdaPQ" \
+-H "Content-Type: application/json"
+
+
+curl -X GET "ws://127.0.0.1:8000/ws/endpoint/" \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODExMzUwNTM0LCJpYXQiOjE3MzkzNTA1MzQsImp0aSI6ImUwODRkY2ZmYTcwOTRlNjg5YzNkMzgwZmJiNWY1ZGJhIiwidXNlcl9pZCI6Mn0.I3nmHyMFcUygDpqPY5ZNYkSV5DQAdJk6v9TaLvIdaPQ" \
+-H "Content-Type: application/json"
+
+
+wscat -c ws://127.0.0.1:8000/ws/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODExMzUwNTM0LCJpYXQiOjE3MzkzNTA1MzQsImp0aSI6ImUwODRkY2ZmYTcwOTRlNjg5YzNkMzgwZmJiNWY1ZGJhIiwidXNlcl9pZCI6Mn0.I3nmHyMFcUygDpqPY5ZNYkSV5DQAdJk6v9TaLvIdaPQ/
+
+wscat -c "ws://localhost:8000/ws/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODExMzUwNTM0LCJpYXQiOjE3MzkzNTA1MzQsImp0aSI6ImUwODRkY2ZmYTcwOTRlNjg5YzNkMzgwZmJiNWY1ZGJhIiwidXNlcl9pZCI6Mn0.I3nmHyMFcUygDpqPY5ZNYkSV5DQAdJk6v9TaLvIdaPQ"
+
+{"message" : "wins"}
+
+{"message" : "winrate"}
+
+{"message" : "agi"}
+
+#python manage.py test Asims_Leaderboard.tests_consumers.TestBrowserConsumer.test_BrowserInvalidMessages

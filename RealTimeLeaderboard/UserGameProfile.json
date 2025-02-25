@@ -1,0 +1,158 @@
+[
+{
+  "model": "Asims_Leaderboard.usergameprofile",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "Killua"
+    ],
+    "game": 1,
+    "wins": 25,
+    "losses": 8
+  }
+},
+{
+  "model": "Asims_Leaderboard.usergameprofile",
+  "pk": 2,
+  "fields": {
+    "user": [
+      "Killua"
+    ],
+    "game": 3,
+    "wins": 81,
+    "losses": 28
+  }
+},
+{
+  "model": "Asims_Leaderboard.usergameprofile",
+  "pk": 3,
+  "fields": {
+    "user": [
+      "Killua"
+    ],
+    "game": 5,
+    "wins": 30,
+    "losses": 12
+  }
+},
+{
+  "model": "Asims_Leaderboard.usergameprofile",
+  "pk": 4,
+  "fields": {
+    "user": [
+      "lua"
+    ],
+    "game": 2,
+    "wins": 15,
+    "losses": 7
+  }
+},
+{
+  "model": "Asims_Leaderboard.usergameprofile",
+  "pk": 5,
+  "fields": {
+    "user": [
+      "lua"
+    ],
+    "game": 4,
+    "wins": 22,
+    "losses": 9
+  }
+},
+{
+  "model": "Asims_Leaderboard.usergameprofile",
+  "pk": 6,
+  "fields": {
+    "user": [
+      "Gon"
+    ],
+    "game": 1,
+    "wins": 20,
+    "losses": 15
+  }
+},
+{
+  "model": "Asims_Leaderboard.usergameprofile",
+  "pk": 7,
+  "fields": {
+    "user": [
+      "Gon"
+    ],
+    "game": 3,
+    "wins": 54,
+    "losses": 20
+  }
+},
+{
+  "model": "Asims_Leaderboard.usergameprofile",
+  "pk": 8,
+  "fields": {
+    "user": [
+      "Gon"
+    ],
+    "game": 5,
+    "wins": 25,
+    "losses": 8
+  }
+},
+{
+  "model": "Asims_Leaderboard.usergameprofile",
+  "pk": 9,
+  "fields": {
+    "user": [
+      "Kurapika"
+    ],
+    "game": 2,
+    "wins": 35,
+    "losses": 5
+  }
+},
+{
+  "model": "Asims_Leaderboard.usergameprofile",
+  "pk": 10,
+  "fields": {
+    "user": [
+      "Kurapika"
+    ],
+    "game": 4,
+    "wins": 27,
+    "losses": 8
+  }
+},
+{
+  "model": "Asims_Leaderboard.usergameprofile",
+  "pk": 11,
+  "fields": {
+    "user": [
+      "Leorio"
+    ],
+    "game": 1,
+    "wins": 12,
+    "losses": 18
+  }
+},
+{
+  "model": "Asims_Leaderboard.usergameprofile",
+  "pk": 12,
+  "fields": {
+    "user": [
+      "Leorio"
+    ],
+    "game": 3,
+    "wins": 15,
+    "losses": 12
+  }
+},
+{
+  "model": "Asims_Leaderboard.usergameprofile",
+  "pk": 13,
+  "fields": {
+    "user": [
+      "Leorio"
+    ],
+    "game": 5,
+    "wins": 18,
+    "losses": 15
+  }
+}
+]

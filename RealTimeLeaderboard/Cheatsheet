@@ -1,0 +1,64 @@
+psql -h leaderboarddb.c3kiomgcw6w0.us-east-1.rds.amazonaws.com -U postgres postgres
+
+for connecting to psql db
+
+
+REDIS CLIENT
+
+sudo apt-get install redis-server
+sudo service redis-server start
+redis-cli ping
+redis-cli SAVE - (manual save)
+redis-cli FLUSHALL  # Deletes everything in all databases
+redis-cli FLUSHDB #for current db
+redis-cli --version
+
+
+r.zrange("your_set", 0, -1, withscores=True)
+
+
+redis keys
+
+ 1) "Scrabble_wins_leaderboard"
+ 2) "Monopoly:2:total_wins"
+ 3) "Chess:1:winrate"
+ 4) "Uno:5:total_wins"
+ 5) "Jenga:4:total_losses"
+ 6) "Scrabble_winrate_leaderboard"
+ 7) "Jenga:4:total_wins"
+ 8) "Monopoly:2:total_losses"
+ 9) "Chess:1:total_wins"
+10) "winrate_leaderboard"
+11) "Jenga:4:winrate"
+12) "Uno:5:winrate"
+13) "Scrabble:3:winrate"
+14) "wins_leaderboard"
+15) "Scrabble:3:total_wins"
+16) "Uno:5:total_losses"
+17) "Monopoly:2:winrate"
+18) "Scrabble:3:total_losses"
+19) "Chess:1:total_losses"
+
+
+add 1 loss to scrabble set
+
+r.zrange("Scrabble:3:total_losses", 0, -1, withscores=True)
+r.zrange("Scrabble:3:total_wins", 0, -1, withscores=True)
+
+
+r.zincrby("Scrabble:3:total_wins", 30, "Killua:2")
+
+
+#ls -R 
+for getting the tree from bash for debugging . 
+
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODExMzUwNTM0LCJpYXQiOjE3MzkzNTA1MzQsImp0aSI6ImUwODRkY2ZmYTcwOTRlNjg5YzNkMzgwZmJiNWY1ZGJhIiwidXNlcl9pZCI6Mn0.I3nmHyMFcUygDpqPY5ZNYkSV5DQAdJk6v9TaLvIdaPQ
+
+
+
+#python manage.py dumpdata Users.customuser --natural-foreign --natural-primary --indent 2 -o users.json
+
+#python manage.py dumpdata Asims_Leaderboard.UserGameProfile --natural-foreign --natural-primary --indent 2 -o UserGameProfile.json 
+
+#python manage.py dumpdata Asims_Leaderboard.Game --natural-foreign --natural-primary --indent 2 -o Game.json

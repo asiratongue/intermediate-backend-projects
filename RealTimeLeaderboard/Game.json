@@ -1,0 +1,50 @@
+[
+{
+  "model": "Asims_Leaderboard.game",
+  "pk": 1,
+  "fields": {
+    "name": "Chess",
+    "description": "Chess is a strategic board game for two players where each commands an army of unique pieces on a checkered battlefield, maneuvering to capture the opponent's king."
+  }
+},
+{
+  "model": "Asims_Leaderboard.game",
+  "pk": 2,
+  "fields": {
+    "name": "Monopoly",
+    "description": "Monopoly is a property trading board game where players buy, rent, and develop properties while trying to bankrupt their opponents."
+  }
+},
+{
+  "model": "Asims_Leaderboard.game",
+  "pk": 3,
+  "fields": {
+    "name": "Scrabble",
+    "description": "Scrabble is a word game where players score points by placing letter tiles to form words on a board with premium squares."
+  }
+},
+{
+  "model": "Asims_Leaderboard.game",
+  "pk": 4,
+  "fields": {
+    "name": "Jenga",
+    "description": "Jenga is a tension-filled dexterity game where players take turns removing blocks from a tower until it collapses."
+  }
+},
+{
+  "model": "Asims_Leaderboard.game",
+  "pk": 5,
+  "fields": {
+    "name": "Uno",
+    "description": "Uno is a card-matching game where players race to empty their hands by playing cards that match the color or number of the top card."
+  }
+},
+{
+  "model": "Asims_Leaderboard.game",
+  "pk": 6,
+  "fields": {
+    "name": "Connect Four",
+    "description": "Connect Four is a vertical strategy game where players drop colored discs into a grid, trying to align four in any direction."
+  }
+}
+]

@@ -1,0 +1,49 @@
+curl -X POST http://127.0.0.1:8000/AsimsLeaderboard/register/ \
+     -H "Content-Type: application/json" \
+     -d '{"username": "Killua", "email": "Killua@example.com", "password": "securepassword"}'
+
+curl -X POST http://127.0.0.1:8000/AsimsLeaderboard/register/ \
+     -H "Content-Type: application/json" \
+     -d '{"username": "lua", "email": "lua@example.com", "password": "securepassword"}'
+
+
+curl -X POST http://127.0.0.1:8000/AsimsLeaderboard/register/ \
+     -H "Content-Type: application/json" \
+     -d '{"username": "Gon", "email": "Gonfishin@example.com", "password": "securepassword"}'
+
+curl -X POST http://127.0.0.1:8000/AsimsLeaderboard/login/ \
+     -H "Content-Type: application/json" \
+     -d '{"username" : "Killua", "password": "securepassword"}' 
+
+
+curl -X POST http://127.0.0.1:8000/AsimsLeaderboard/login/ \
+     -H "Content-Type: application/json" \
+     -d '{"username" : "lua", "password": "securepassword"}' 
+
+
+curl -X POST http://127.0.0.1:8000/AsimsLeaderboard/login/ \
+     -H "Content-Type: application/json" \
+     -d '{"username" : "Asim", "password": "Abundanc3!"}' 
+
+
+
+
+Killua Token 
+"refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0Mjg5MDg3NSwiaWF0IjoxNzM5NDM0ODc1LCJqdGkiOiJiMWFjNDk1NWRhZmI0NzM2ODBlMDVjZGEyZDA2ODk5MSIsInVzZXJfaWQiOjJ9.KXcCk5fCp9rjrUkyG2NxF0JwYozAWeeAbLFVWk9JXKY",
+"access":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODExNDM0ODc1LCJpYXQiOjE3Mzk0MzQ4NzUsImp0aSI6IjM2ZmY2ZmQyNjA4YzQ4N2Q4YjJmZjk3MjE5YjljZWZhIiwidXNlcl9pZCI6Mn0.iZq_ueG3gLl99ZKTyWWB6jtm8IKQhmjt7uveFCGEiGY"
+
+Lua Token
+"refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0Mjg5MTEzMiwiaWF0IjoxNzM5NDM1MTMyLCJqdGkiOiJiNDY3ZjNjNjViYmU0YjliODNlZWE1ZGNjZWUxZDU0ZiIsInVzZXJfaWQiOjN9.S7su1qIrC0A1-2gdnNAXj6GIBYzFD4sNraIAHF8eIbE",
+"access":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODExNDM1MTMyLCJpYXQiOjE3Mzk0MzUxMzIsImp0aSI6IjAyYjY4YjE5ODY4MDQ3NmViNjA4YmExMDUwOTc1MzI3IiwidXNlcl9pZCI6M30.dRtT6BeVKrakQ6kuPHZXttb7V2Z8kv_UKCMsEhl_bLQ"
+
+Gon Token
+"refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0Mjg5MTE2MywiaWF0IjoxNzM5NDM1MTYzLCJqdGkiOiI1YjkxNzk1MjY5YTE0NDViYTI2OTExNGM1ZTliNDQwMSIsInVzZXJfaWQiOjR9.iv4o909KzkbeRCJ5VEoQCOopdiBD5qVQdRb8dqpNgUc",
+"access":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODExNDM1MTYzLCJpYXQiOjE3Mzk0MzUxNjMsImp0aSI6IjIzZmEwM2E2ZDJhNTQxNmI4N2I2YTY4YzVlODA1YTcxIiwidXNlcl9pZCI6NH0.vVQSBt3TSsjKYON8yc8IYutYo9SJGgwfkvPMzeZF-Us"
+
+Kurapika Token 
+"refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0Mjg5MTIxMCwiaWF0IjoxNzM5NDM1MjEwLCJqdGkiOiIyYjgyNGRhNmEwMTg0NGU2YTgwOTliOWRhMDA2YzVjOSIsInVzZXJfaWQiOjV9.3SuJcNGrp4SxL1El7AJOx19vtDtN06zqWl34kWv-p0E",
+"access":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODExNDM1MjEwLCJpYXQiOjE3Mzk0MzUyMTAsImp0aSI6IjVmMGVkNDk5YzA0MDRmZDNiMzY0OWRlZGYxZTI2NDU0IiwidXNlcl9pZCI6NX0.AQD-Bnzj9GwW0wsWRFRvH3SZTEaodapXFSIZyx3QFIY"
+
+Leorio Token
+"refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0Mjg5MTI1NSwiaWF0IjoxNzM5NDM1MjU1LCJqdGkiOiI3NTU5ZmYzYWFkODA0OWY3YWRhMTk0NTEwZDUwYWE3NCIsInVzZXJfaWQiOjZ9.YX99r7KWG3kU4-x5DRzri0MfglZ51Jf3Z5hVKBwI6Fo",
+"access":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxODExNDM1MjU1LCJpYXQiOjE3Mzk0MzUyNTUsImp0aSI6IjgxNzRjYmM2MGYzNDRhNjJiYTc3ZjIyYzVmMDY5ZjllIiwidXNlcl9pZCI6Nn0.xtqrTuAKgpFEZSALMHbAmICPQ_Pn2d6olygUAo1O3Iw"

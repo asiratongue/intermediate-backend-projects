@@ -1,0 +1,6 @@
+# .gitignore
+
+**/.env
+**/DEV LOG.md
+db.sqlite3
+Cheatsheet.txt
