@@ -38,7 +38,7 @@ Built with Django + Django REST Framework, Amazon AWS for database + cloud stora
 `python manage.py runserver`
 
 
-## **Endpoints**
+## **API Endpoints**
 
 
 ### **Users**
