@@ -104,4 +104,4 @@ The system uses Redis sorted sets to efficiently store and retrieve leaderboard 
 - Real-time updates are propagated through Redis pub/sub
 - Time-filtered queries are optimized using Redis cache
 
-Thank you for using Asim's Real Time Leaderboard system!
+Thank you :)
