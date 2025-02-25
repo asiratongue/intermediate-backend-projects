@@ -5,36 +5,36 @@ Built with Django + Django REST Framework, Django Channels for the WebSockets pr
 
 #### **To run and test on Windows** 
 
-1) Clone the repo with svn:
+1) Clone the repo with svn:  
 ` svn export https://github.com/asiratongue/intermediate-backend-projects/tree/main/RealTimeLeaderboard`
 
-2) Create and activate the virtual environment from terminal with:
-   'python3 -m venv venv'
-   'PS venv\Scripts\activate (on Windows)'
+2) Create and activate the virtual environment from terminal with:  
+   `python3 -m venv venv`  
+   `PS venv\Scripts\activate (on Windows)`
    
-3) Install the dependencies from terminal with:
+3) Install the dependencies from terminal with:  
    `pip install -r requirements.txt`
    
-4) Install and configure Redis locally (required for WebSocket connections and leaderboards):
+4) Install and configure Redis locally (required for WebSocket connections and leaderboards):  
 
-`Download from Redis.io`
-`Start Redis server on default port (6379)`
+   `Download from Redis.io`  
+   `Start Redis server on default port (6379)`
 
 
-5) Configure your database settings in settings.py or use a .env file:
-eg:
-`# .env`
-`DB_NAME='your_database_name'`
-`DB_USER='your_database_user'`
-`DB_PASSWORD='your_database_password'`
-`DB_HOST='localhost' # or your remote DB host`
-`DB_PORT='5432'`
+5) Configure your database settings in settings.py or use a .env file:  
+eg:  
+`# .env`  
+`DB_NAME='your_database_name'`  
+`DB_USER='your_database_user'`  
+`DB_PASSWORD='your_database_password'`  
+`DB_HOST='localhost' # or your remote DB host`  
+`DB_PORT='5432'`  
 
-6) Run migrations: 
+6) Run migrations:   
 `python manage.py migrate`
 
-7) Start the Django app: 
-'python manage.py runserver'
+7) Start the Django app:   
+`python manage.py runserver`
 
 ## API Endpoints
 
@@ -81,7 +81,7 @@ The system provides real-time updates via WebSocket connections. Connect to:
 ```
 ws://localhost:8000/ws/?<your-jwt-token-here>/
 ```
-
+The websocket is protected via JWT authentication, you can use the same JWT you get from login, unauthorized users will be disconnected.
 This allows for real-time updates of the global wins leaderboard, and global winrate leaderboard, whenever new scores are submitted for any game.
 
 ## Data Structure
