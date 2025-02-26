@@ -1,0 +1,10 @@
+# get cloud backup working, and test with an rds.
+
+
+
+implement a principle of least privilege!
+
+dont just use superusers . . . 
+
+
+#fix overwrite behaviour, so it checks if already exists, then adds a number or copy or some shi

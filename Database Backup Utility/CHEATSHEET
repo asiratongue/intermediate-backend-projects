@@ -1,0 +1,28 @@
+psql -U postgres
+
+psql password = password
+
+
+
+to grant access to all tables in sql
+
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO devuser;
+
+GRANT LOCK TABLES ON DATABASE mydevelopmentdb TO devuser;
+
+
+#ALTER USER devuser WITH SUPERUSER;
+
+superuser permission . . .
+
+\c mydevelopmentdb
+
+to change to developmentdb
+
+"COPY {table} TO STDOUT WITH CSV HEADER"
+
+
+s3.Bucket('dbstorageutility')
+
+
+
