@@ -1,7 +1,0 @@
-{
-    "BucketName": "dbstorageutility",
-    "Region": "eu-west-2",
-    "AccessControl": "Private",
-    "Versioning": false,
-    "Encryption": true
-  }
