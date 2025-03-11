@@ -1,0 +1,44 @@
+2025-03-10 22:38:07,407 - DBMS_log - ERROR - Unsupported database type: unsupported_db
+2025-03-10 22:38:07,411 - DBMS_log - ERROR - Error: Unable to connect to database. Details : Connection error
+2025-03-10 22:41:45,850 - DBMS_log - ERROR - you must enter a valid database type! -> (postgres, sqlite, mongodb)
+2025-03-10 23:53:27,086 - DBMS_log - ERROR - Unsupported database type: unsupported_db
+2025-03-10 23:53:27,088 - DBMS_log - ERROR - Error: Unable to connect to database. Details : Connection error
+2025-03-10 23:55:02,356 - DBMS_log - ERROR - you must enter a valid database type! -> (postgres, sqlite, mongodb)
+2025-03-10 23:57:31,758 - DBMS_log - ERROR - error: Invalid input, must be 'd' or 't'
+2025-03-11 08:27:53,922 - DBMS_log - ERROR - you must enter a valid database type! -> (postgres, sqlite, mongodb)
+2025-03-11 08:51:26,160 - DBMS_log - ERROR - Unsupported database type: unsupported_db
+2025-03-11 08:51:26,163 - DBMS_log - ERROR - Error: Unable to connect to database. Details : Connection error
+2025-03-11 14:57:30,029 - DBMS_log - ERROR - error: Invalid input, must be 'd' or 't'
+2025-03-11 15:13:01,884 - DBMS_log - ERROR - error : invalid input, must select from one of the backups!
+2025-03-11 15:13:02,083 - DBMS_log - ERROR - error : invalid input, must select from one of the backups!
+2025-03-11 15:13:02,123 - DBMS_log - ERROR - error : invalid input, must select from one of the backups!
+2025-03-11 15:13:02,142 - DBMS_log - ERROR - error : invalid input, must select from one of the backups!
+2025-03-11 15:13:02,159 - DBMS_log - ERROR - error : invalid input, must select from one of the backups!
+2025-03-11 15:13:02,187 - DBMS_log - ERROR - error : invalid input, must select from one of the backups!
+2025-03-11 15:13:02,206 - DBMS_log - ERROR - error : invalid input, must select from one of the backups!
+2025-03-11 15:13:02,225 - DBMS_log - ERROR - error : invalid input, must select from one of the backups!
+2025-03-11 15:13:02,237 - DBMS_log - ERROR - error: Invalid input, must be 'd' or 't'
+2025-03-11 15:13:02,250 - DBMS_log - ERROR - error : invalid input, must select from one of the backups!
+2025-03-11 16:19:04,839 - DBMS_log - ERROR - error : invalid input, must select from one of the backups!
+2025-03-11 19:56:56,295 - DBMS_log - ERROR - Error clearing database : 'MockFile' object has no attribute 'close'
+2025-03-11 19:56:56,405 - DBMS_log - ERROR - error: Invalid input, must be 'd' or 't'
+2025-03-11 20:07:18,295 - DBMS_log - ERROR - Error clearing database : 'MockFile' object has no attribute 'close'
+2025-03-11 20:07:18,393 - DBMS_log - ERROR - error: Invalid input, must be 'd' or 't'
+2025-03-11 20:14:10,822 - DBMS_log - ERROR - error: Invalid input, must be 'd' or 't'
+2025-03-11 21:25:05,385 - DBMS_log - ERROR - error: Invalid input, must be 'd' or 't'
+2025-03-11 21:32:47,552 - DBMS_log - ERROR - error: Invalid input, must be 'd' or 't'
+2025-03-11 21:33:47,991 - DBMS_log - ERROR - Invalid input, you must type 'full', or your table/collection names to back up!
+2025-03-11 21:33:47,996 - DBMS_log - ERROR - Compression values must be between 1 and 10!
+2025-03-11 21:33:48,175 - DBMS_log - ERROR - error : invalid input,  must be 'd' or 't'
+2025-03-11 21:33:48,720 - DBMS_log - ERROR - error: Invalid input, must be 'd' or 't'
+2025-03-11 21:33:48,761 - DBMS_log - ERROR - Unsupported database type: unsupported_db
+2025-03-11 21:33:48,764 - DBMS_log - ERROR - Error: Unable to connect to database. Details : Connection error
+2025-03-11 21:33:48,819 - DBMS_log - ERROR - you must enter a valid database type! -> (postgres, sqlite, mongodb)
+2025-03-11 21:39:07,488 - DBMS_log - ERROR - error: Invalid input, must be 'd' or 't'
+2025-03-11 21:39:19,511 - DBMS_log - ERROR - Invalid input, you must type 'full', or your table/collection names to back up!
+2025-03-11 21:39:19,516 - DBMS_log - ERROR - Compression values must be between 1 and 10!
+2025-03-11 21:39:19,680 - DBMS_log - ERROR - error : invalid input,  must be 'd' or 't'
+2025-03-11 21:39:19,986 - DBMS_log - ERROR - error: Invalid input, must be 'd' or 't'
+2025-03-11 21:39:20,019 - DBMS_log - ERROR - Unsupported database type: unsupported_db
+2025-03-11 21:39:20,021 - DBMS_log - ERROR - Error: Unable to connect to database. Details : Connection error
+2025-03-11 21:39:20,067 - DBMS_log - ERROR - you must enter a valid database type! -> (postgres, sqlite, mongodb)

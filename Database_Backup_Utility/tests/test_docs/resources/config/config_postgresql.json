@@ -1,0 +1,9 @@
+{
+  "host": "localhost",
+  "port": "5432",
+  "database": "test_postgres_db",
+  "user": "postgres",
+  "password": "postgres",
+  "Local": true,
+  "type": "postgresql"
+}

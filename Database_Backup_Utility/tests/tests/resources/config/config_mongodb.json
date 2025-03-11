@@ -1,0 +1,10 @@
+{
+  "protocol": "mongodb://",
+  "host": "localhost:27017",
+  "user": "",
+  "password": "",
+  "Local": true,
+  "type": "mongodb",
+  "database": "test_backup_db",
+  "connection_string": "mongodb://localhost:27017"
+}

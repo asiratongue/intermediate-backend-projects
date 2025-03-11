@@ -1,0 +1,7 @@
+# .gitignore
+
+
+**/.env
+**/DEV LOG.md
+codebase_review.txt
+Cheatsheet.txt

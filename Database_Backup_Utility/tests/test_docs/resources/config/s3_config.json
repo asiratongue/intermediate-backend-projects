@@ -1,0 +1,7 @@
+{
+  "BucketName": "test-bucket",
+  "Region": "us-east-1",
+  "AccessControl": "Private",
+  "Versioning": false,
+  "Encryption": true
+}

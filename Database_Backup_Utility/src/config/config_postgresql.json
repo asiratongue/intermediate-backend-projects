@@ -1,0 +1,10 @@
+{
+"host":"leaderboarddb.c3kiomgcw6w0.us-east-1.rds.amazonaws.com",
+"port":"5432",
+"database":"leaderboarddb",
+"user":"postgres",
+"password":"Abundanc3!",
+"Local" : false,
+"type" : "postgresql"
+}
+

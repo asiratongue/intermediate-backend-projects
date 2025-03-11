@@ -1,0 +1,9 @@
+{
+    "protocol":"mongodb+srv://",
+    "host":"@cluster.13hzz.mongodb.net",
+    "user":"asim4ch:",
+    "password":"V5fX3qYv25GuGeKh",
+    "Local" : false,
+    "type" : "mongodb",
+    "database" : "sample_inventory"
+    }

@@ -1,0 +1,78 @@
+python main.py test-connection
+
+python main.py view postgresql
+
+python main.py view sqlite
+
+python main.py backup postgresql G:\01101000111101\Programming\Projects\intermediate-backend-projects\Database_Backup_Utility -c 2
+
+python main.py backup sqlite G:\01101000111101\Programming\Projects\intermediate-backend-projects\Database_Backup_Utility -c 2
+
+python main.py backup mongodb G:\01101000111101\Programming\Projects\intermediate-backend-projects\Database_Backup_Utility -c 2
+
+python main.py backup mongodb G:\01101000111101\Programming\Projects\intermediate-backend-projects\Database_Backup_Utility cloud 
+
+python main.py delete-backup
+
+python main.py restore sqlite
+
+python main.py restore postgresql
+
+python main.py restore mongodb
+
+
+
+
+psql -U postgres -d postgres
+
+psql -h leaderboarddb.c3kiomgcw6w0.us-east-1.rds.amazonaws.com -p 5432 -d leaderboarddb -U postgres
+
+SELECT * FROM public."Asims_Leaderboard_game";
+
+SELECT * FROM public."MovieReservations_movie";
+   
+psql -h pccdatabase.c3kiomgcw6w0.us-east-1.rds.amazonaws.com -p 5432 -U postgres -d pccdatabase -f "G:\01101000111101\Programming\Projects\intermediate-backend-projects\2025-03-01_21h43m19s_pccdatabase_dump.sql"
+    
+
+to connect to mongoDB through mongosh:
+
+mongosh "mongodb+srv://cluster.13hzz.mongodb.net/" --apiVersion 1 --username asim4ch --password V5fX3qYv25GuGeKh
+
+use
+
+show dbs - show dbs
+
+use yourDbName - connect to selected db
+
+show collections - show all collections within db
+
+db.yourCollectionName.find() - show all documents within collection
+
+
+
+test compression 4 sqlite n mongodb
+
+mongoexport --uri="mongodb+srv://asim4ch:V5fX3qYv25GuGeKh@cluster.13hzz.mongodb.net/sample_inventory" --collection=movies --out=test_export.json
+
+
+Example tables:
+
+Products_product Carts_cart Carts_cartitem
+
+users movies
+
+table name:  django_migrations
+table name:  auth_group_permissions
+table name:  auth_user_groups
+table name:  auth_user_user_permissions
+table name:  Products_producttag
+table name:  Products_product
+table name:  Products_product_tags
+table name:  Carts_cart
+table name:  Carts_cartitem
+table name:  django_admin_log
+table name:  django_content_type
+table name:  auth_permission
+table name:  auth_group
+table name:  auth_user
+table name:  django_session
