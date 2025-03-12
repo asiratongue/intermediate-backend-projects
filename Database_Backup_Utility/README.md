@@ -2,7 +2,9 @@
 
 
 This database backup utility is a CLI tool which allows users to backup, restore, and delete created backups for various Database types. Tables / Collections can also be individually backed up as .csv files, and can be viewed within the tool. The database connection can be tested to ensure that it is working and available to use, and backups can also optionally be compressed with a chosen amount from 1-10. Currently, this tool only supports postgresql, sqlite, and mongodb, but may be updated in the future to support more database types. Backups can optionally be stored in the cloud using an s3 bucket (only option at the moment), or else stored locally.
-This was built with Typer for the CLI commands, and utilises various database specific tools/libraries such as pg_dump and pymongo for database management.   
+  
+This was built with Typer for the CLI commands, and utilises various database specific tools/libraries such as pg_dump and pymongo for database management.
+  
 Tests were written in pytest with prompting given to claude, and currently 3/4 of the tests are working.
 
 
@@ -58,7 +60,9 @@ Test the connection of your configured database, returns the status response of 
   
 #### **arguments:**   
 **db_type** - the type of database that one is testing (Mongodb, postgresql, sqlite).  
-                                                                                                                                                 
+
+
+                                                                                                                                                         
 ### **view:**              
 View all the tables/collections within your configured database.
 
@@ -83,8 +87,8 @@ restore configured database from full sql dump or selected csv table.
 
 #### **arguments:**   
 **db_type** - type of database to back up (postgresql, sqlite, mongodb.  
-
-
+  
+  
 ## **TODO:**
 
 add some form of mongodb validation,  
