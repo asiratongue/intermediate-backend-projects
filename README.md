@@ -40,3 +40,6 @@ https://roadmap.sh/projects/database-backup-utility
 
 
 https://roadmap.sh/projects/scalable-ecommerce-platform
+
+**TODO**  
+Split the repo into individual projects to allow for cloning!
