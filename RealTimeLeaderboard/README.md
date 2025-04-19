@@ -1,5 +1,7 @@
-Real Time Leaderboard
-The Real Time Leaderboard is a backend API which allows users to register, sign in, submit scores for various games, and view global + game-specific leaderboards in real-time. The system handles score tracking, leaderboard generation, and provides both REST API endpoints for score submission, viewing games etc, and WebSocket connections for real-time updates.
+# 📅 Real Time Leaderboard 📅
+
+
+"RealTimeLeaderboard" is a backend API which allows users to register, sign in, submit scores for various games, and view global + game-specific leaderboards in real-time. The system handles score tracking, leaderboard generation, and provides both REST API endpoints for score submission, viewing games etc, and WebSocket connections for real-time updates.
 Built with Django + Django REST Framework, Django Channels for the WebSockets protocol, Redis for leaderboard caching and real-time updates, and PostgreSQL for persistent data storage.
 
 
