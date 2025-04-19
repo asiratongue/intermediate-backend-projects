@@ -2,7 +2,7 @@ I have decided to pursue the completion of all projects listed on roadmap.sh,
 in order to better myself as a programmer, build a solid foundation/understanding of back end programming, and learn python.
 
 
-All projects: https://roadmap.sh/backend/projects
+https://roadmap.sh/backend/projects
 
 
 https://roadmap.sh/projects/caching-server
