@@ -11,7 +11,7 @@ Must pass the jwt token within json data itself using "Content-Type: application
 `api/payments/success/`   
 Payment success template view.
 
-'api/payments/cancel/`   
+`api/payments/cancel/`   
 Payment cancelled template view.
 
 **GET** `api/payments/refund/<str:id>/`   
