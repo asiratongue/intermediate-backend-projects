@@ -1,0 +1,378 @@
+services:
+  # Nginx service acting as API gateway
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./static_volume:/app/static
+    depends_on:
+      - user-service
+      - product-service
+      - cart-service
+      - order-service
+      - payment-service
+      - notification-service
+      - redis
+      - user-celery
+      - cart-celery
+      - order-celery
+      - consul
+
+    environment:
+      - TZ=Europe/London
+
+  consul:
+    image: hashicorp/consul:1.20
+    ports:
+      - "8500:8500"
+      - "8600:8600/udp"
+    command: "agent -dev -client=0.0.0.0 -log-level=debug"
+    environment:
+      - CONSUL_LOG_LEVEL=debug
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.0
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - ES_JAVA_OPTS=-Xms1g -Xmx1g
+    ports:
+      - "9200:9200"
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9200"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+
+#all the volume does is modify the original pipeline file to become your one!
+#the image pulls the logstash binaries and stores it in the docker container.
+  logstash:
+    image: docker.elastic.co/logstash/logstash:8.12.0
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./logstash-config:/usr/share/logstash/pipeline/
+      - ./logstash-config/shopshop-template.json:/usr/share/logstash/pipeline/shopshop-template.json
+    environment:
+      - LS_JAVA_OPTS=-Xms512m -Xmx512m
+      - PIPELINE_WORKERS=4
+      - PIPELINE_BATCH_SIZE=250
+      - PIPELINE_BATCH_DELAY=50
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+    healthcheck:
+        test: ["CMD", "curl", "-f", "http://localhost:9600"]
+        interval: 10s
+        timeout: 5s
+        retries: 5
+        start_period: 30s
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.12.0
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+
+  node-exporter:
+    image: prom/node-exporter
+    ports:
+      - "9100:9100"
+    restart: unless-stopped    
+
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+    depends_on:
+      - user-service
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_LOG_LEVEL=warn
+    depends_on:
+      - prometheus
+
+  user-service:
+    build: ./user_service
+    volumes:     
+      - ./user_service:/app
+      - ./media:/app/media
+    environment:
+      - DATABASE_URL=postgres://postgres:Noinfodiet25!@user-db:5432/user_db
+      - DJANGO_SETTINGS_MODULE=user_service.settings
+      - SECRET_KEY='django-insecure-y5*d=x10k!)hvm)9pn444hf+y@rcix5=wb%fytxtif0+_sn%^y'
+      - TZ=Europe/London
+    depends_on:
+      - user-db
+    env_file:
+      - user_service/.env
+
+
+  product-service:
+    build: ./product_catalog_service
+    volumes:
+      - ./product_catalog_service:/app
+    environment:
+      - DATABASE_URL=postgres://postgres:Noinfodiet25!@product-db:5432/product_db
+      - SECRET_KEY='django-insecure-y5*d=x10k!)hvm)9pn444hf+y@rcix5=wb%fytxtif0+_sn%^y'
+      - TZ=Europe/London
+    depends_on:
+      - product-db
+      - consul 
+    env_file:
+      - product_catalog_service/.env
+  
+
+  cart-service:
+    build: ./shopping_cart_service
+    
+    volumes:
+      - ./shopping_cart_service:/app
+
+    environment:
+      - DATABASE_URL=postgres://postgres:Noinfodiet25!@cart-db:5432/cart_db
+      - SECRET_KEY='django-insecure-y5*d=x10k!)hvm)9pn444hf+y@rcix5=wb%fytxtif0+_sn%^y'
+      - TZ=Europe/London
+
+    depends_on:
+      - cart-db
+      - consul
+
+    env_file:
+      - shopping_cart_service/.env
+      
+ 
+  order-service:
+    build: ./order_service
+    volumes:
+      - ./order_service:/app
+    environment:
+      - DATABASE_URL=postgres://postgres:Noinfodiet25!@order-db:5432/order_db
+      - SECRET_KEY='django-insecure-y5*d=x10k!)hvm)9pn444hf+y@rcix5=wb%fytxtif0+_sn%^y'
+      - TZ=Europe/London
+    depends_on:
+      - order-db
+      - consul
+
+    env_file:
+      - order_service/.env
+
+
+  payment-service:
+    build: ./payment_service
+    volumes:
+      - ./payment_service:/app
+    environment:
+      - DATABASE_URL=postgres://postgres:Noinfodiet25!@payment-db:5432/payment_db
+      - SECRET_KEY='django-insecure-y5*d=x10k!)hvm)9pn444hf+y@rcix5=wb%fytxtif0+_sn%^y'
+      - TZ=Europe/London
+    depends_on:
+      - payment-db
+      - consul
+
+    env_file:
+      - payment_service/.env
+
+  notification-service:
+    tty: true
+    build: ./notification_service
+    volumes:
+      - ./notification_service:/app
+    depends_on:
+      - redis
+      - consul
+    env_file:
+      - notification_service/.env
+  
+
+  order-signals-consumer:
+    build: ./order_service
+    volumes:
+      - ./order_service:/app
+    command: python -m order_service.consumers
+    depends_on:
+      - order-db
+      - redis
+      - consul   
+    environment:
+      - DATABASE_URL=postgres://postgres:Noinfodiet25!@order-db:5432/order_db
+      - SECRET_KEY='django-insecure-y5*d=x10k!)hvm)9pn444hf+y@rcix5=wb%fytxtif0+_sn%^y'
+      - TZ=Europe/London
+    env_file:
+      - order_service/.env
+
+  product-signals-consumer:
+    build: ./product_catalog_service
+    volumes:
+      - ./product_catalog_service:/app
+    command: python -m product_catalog_project.consumers
+    depends_on:
+      - product-db
+      - redis
+      - consul     
+    environment:
+      - DATABASE_URL=postgres://postgres:Noinfodiet25!@order-db:5432/product_db
+      - DJANGO_SETTINGS_MODULE=product_catalog_service.settings
+      - TZ=Europe/London
+    env_file:
+      - product_catalog_service/.env
+
+  cart-signals-consumer:
+    build: ./shopping_cart_service
+    volumes:
+      - ./shopping_cart_service:/app
+    command: python -m shopping_cart_service.consumers
+    depends_on:
+      - cart-db
+      - redis
+      - consul     
+    environment:
+      - DATABASE_URL=postgres://postgres:Noinfodiet25!@order-db:5432/cart_db
+      - SECRET_KEY='django-insecure-y5*d=x10k!)hvm)9pn444hf+y@rcix5=wb%fytxtif0+_sn%^y'
+      - TZ=Europe/London
+    env_file:
+      - shopping_cart_service/.env
+
+  user-db:
+    image: postgres:16.2
+    environment:
+      - POSTGRES_DB=user_db
+      - POSTGRES_PASSWORD=Noinfodiet25!
+      - TZ=Europe/London
+    volumes:
+      - user-db-data:/var/lib/postgresql/data
+
+  product-db:
+    image: postgres:16.2
+    environment:
+      - POSTGRES_DB=product_db
+      - POSTGRES_PASSWORD=Noinfodiet25!
+      - TZ=Europe/London
+    volumes:
+      - product-db-data:/var/lib/postgresql/data
+
+      
+  cart-db:
+    image: postgres:16.2
+    environment:
+      - POSTGRES_DB=cart_db
+      - POSTGRES_PASSWORD=Noinfodiet25!
+      - TZ=Europe/London
+    volumes:
+      - cart-db-data:/var/lib/postgresql/data
+
+  order-db:
+    image: postgres:16.2
+    environment:
+      - POSTGRES_DB=orders_db
+      - POSTGRES_PASSWORD=Noinfodiet25!
+      - TZ=Europe/London
+    volumes:
+      - order-db-data:/var/lib/postgresql/data
+
+  payment-db:
+    image: postgres:16.2
+    environment:
+      - POSTGRES_DB=payment_db
+      - POSTGRES_PASSWORD=Noinfodiet25!
+      - TZ=Europe/London
+    volumes:
+      - payment-db-data:/var/lib/postgresql/data  
+
+
+  redis:
+    image: redis:6
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+  user-celery:
+    build: ./user_service
+    working_dir: /app/user_service
+    volumes:
+      - ./user_service:/app
+    command: celery -A user_service worker -Q user_queue --pool=solo --loglevel=info
+    depends_on:
+      - product-db
+      - user-db
+      - cart-db
+      - order-db
+      - payment-db
+      - redis
+      - consul              
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - DJANGO_SETTINGS_MODULE=user_service.settings
+      - TZ=Europe/London
+    env_file:
+      - user_service/.env
+
+  cart-celery:
+    build: ./shopping_cart_service
+    working_dir: /app/shopping_cart_service
+    volumes:
+      - ./shopping_cart_service:/app
+    command: celery -A shopping_cart_service worker -Q cart_queue --pool=solo --loglevel=debug
+    depends_on:
+      - product-db
+      - user-db
+      - cart-db
+      - order-db
+      - payment-db
+      - redis
+      - consul       
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - DJANGO_SETTINGS_MODULE=shopping_cart_service.settings
+      - TZ=Europe/London
+    env_file:
+      - shopping_cart_service/.env
+
+
+  order-celery:
+    build: ./order_service
+    working_dir: /app/order_service
+    volumes:
+      - ./order_service:/app
+
+    command: celery -A order_service worker -Q notification_queue --pool=solo --loglevel=info -E
+    depends_on:
+      - product-db
+      - user-db
+      - cart-db
+      - order-db
+      - payment-db
+      - redis
+      - consul      
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - DJANGO_SETTINGS_MODULE=order_service.settings
+      - TZ=Europe/London
+    env_file:
+      - order_service/.env
+
+volumes:
+  es_data:
+  user-db-data:
+  product-db-data:
+  cart-db-data:
+  order-db-data:
+  payment-db-data:
+  redis_data:
+  static_volume:
+

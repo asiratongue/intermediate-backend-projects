@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: paypal-checkout-serversdk
+Version: 1.0.3
+Summary: Deprecated
+Home-page: https://github.com/paypal/Checkout-Python-SDK/
+Author: https://developer.paypal.com
+Author-email: dl-paypal-checkout-api@paypal.com
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: paypalhttp
+
+Deprecated

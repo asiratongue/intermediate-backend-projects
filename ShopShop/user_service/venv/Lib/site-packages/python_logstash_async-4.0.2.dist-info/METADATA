@@ -1,0 +1,103 @@
+Metadata-Version: 2.1
+Name: python-logstash-async
+Version: 4.0.2
+Summary: Asynchronous Python logging handler for Logstash.
+Home-page: https://github.com/eht16/python-logstash-async
+Author: Enrico Tröger
+Author-email: enrico.troeger@uvena.de
+License: MIT
+Project-URL: Source code, https://github.com/eht16/python-logstash-async/
+Project-URL: Documentation, https://python-logstash-async.readthedocs.io/en/stable/
+Keywords: logging logstash asynchronous
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Logging
+Requires-Python: >=3.11
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: limits
+Requires-Dist: pylogbeat
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: django; extra == "dev"
+Requires-Dist: flask; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx-rtd-theme; extra == "docs"
+
+=====================
+python-logstash-async
+=====================
+
+.. image:: https://img.shields.io/pypi/v/python-logstash-async.svg
+    :target: https://pypi.org/project/python-logstash-async/
+    :alt: PyPI
+
+.. image:: https://readthedocs.org/projects/python-logstash-async/badge/?version=latest
+    :target: https://python-logstash-async.readthedocs.io/en/latest/
+    :alt: Documentation Status
+
+.. image:: https://github.com/eht16/python-logstash-async/actions/workflows/tests.yml/badge.svg
+    :target: https://github.com/eht16/python-logstash-async/actions/workflows/tests.yml
+    :alt: CI Tests
+
+.. image:: https://img.shields.io/pypi/pyversions/python-logstash-async.svg
+    :target: https://pypi.org/project/python-logstash-async/
+    :alt: Python Versions
+
+.. image:: https://img.shields.io/pypi/l/python-logstash-async.svg
+    :target: https://pypi.org/project/python-logstash-async/
+    :alt: License
+
+Python Logstash Async is an asynchronous Python logging handler to submit
+log events to a remote Logstash instance.
+
+Unlike most other Python Logstash logging handlers, this package works asynchronously
+by collecting log events from Python's logging subsystem and then transmitting the
+collected events in a separate worker thread to Logstash.
+This way, the main application (or thread) where the log event occurred, doesn't need to
+wait until the submission to the remote Logstash instance succeeded.
+
+This is especially useful for applications like websites or web services or any kind of
+request serving API where response times matter.
+
+For more details, configuration options and usage examples please see the
+documentation at http://python-logstash-async.readthedocs.io/en/latest/.
+
+
+Installation
+------------
+
+The easiest method is to install directly from pypi using pip::
+
+    pip install python-logstash-async
+
+
+If you prefer, you can download python-logstash-async and install it
+directly from source::
+
+    python setup.py install
+
+
+Get the Source
+--------------
+
+The source code is available at https://github.com/eht16/python-logstash-async/.
+
+
+Contributing
+------------
+
+Found a bug or got a feature request? Please report it at
+https://github.com/eht16/python-logstash-async/issues.
+
+
+Author
+------
+
+Enrico Tröger <enrico.troeger@uvena.de>

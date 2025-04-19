@@ -1,0 +1,52 @@
+#prometheus.yml
+global:
+  scrape_interval: 15s
+
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name: 'user-service'
+    metrics_path: '/metrics/user/'
+    static_configs:
+      - targets: ['nginx:80']
+        labels:
+          service: 'user'
+
+  - job_name: 'cart-service'
+    metrics_path: '/metrics/cart/'
+    static_configs:
+      - targets: ['nginx:80']
+        labels:
+          service: 'cart'
+
+  - job_name: 'product-service'
+    metrics_path: '/metrics/product/'
+    static_configs:
+      - targets: ['nginx:80']
+        labels:
+          service: 'product'
+
+  - job_name: 'payment-service'
+    metrics_path: '/metrics/payment/'
+    static_configs:
+      - targets: ['nginx:80']
+        labels:
+          service: 'payment'
+
+  - job_name: 'order-service'
+    metrics_path: '/metrics/order/'
+    static_configs:
+      - targets: ['nginx:80']
+        labels:
+          service: 'order'
+
+
+
+  - job_name: 'node'
+    static_configs:
+      - targets: ['node-exporter:9100']
+
+      

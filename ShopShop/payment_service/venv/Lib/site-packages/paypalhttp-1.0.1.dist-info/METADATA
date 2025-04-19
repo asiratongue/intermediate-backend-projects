@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: paypalhttp
+Version: 1.0.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: PayPal
+License: MIT
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE
+Requires-Dist: requests (>=2.0.0)
+Requires-Dist: six (>=1.0.0)
+Requires-Dist: pyopenssl (>=0.15)
+
+
+	PayPalHttp is a generic http client designed to be used with code-generated projects.
+
+

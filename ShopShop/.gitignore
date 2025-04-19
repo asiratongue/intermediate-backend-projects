@@ -1,0 +1,9 @@
+#gitignore
+
+*/.env
+/Notes
+*/payment_example_commands.txt
+*/order_service_commands.txt
+*/product_service_commands.txt
+*/shopping_cart_service_commands.txt
+*/user_service_commands.txt
