@@ -99,6 +99,7 @@ class DeleteAccount(APIView):
     def delete(self, request):
         User = get_user_model()
         try:
+            #implement password required for deletion.
             user = request.user
             user_id = user.id
             user.delete()
