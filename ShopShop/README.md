@@ -78,4 +78,4 @@ Each service runs as its own independent Django project, and thus can be scaled 
 - Implement Coinbase Commerce and Paypal Refunds into the payment service.
 - Deploy with Kubernetes, implement load balancing and auto-scaling.
 - CI/CD Integration with GitLab CI.
-- add a proper link in to the order, for email notification. 😆
+- Add a proper link in to the order, for email notification. 😆
