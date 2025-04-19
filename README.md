@@ -1,4 +1,9 @@
-my solutions to all the intermediate projects listed on roadmap.sh :)
+I have decided to pursue the completion of all projects listed on roadmap.sh,
+in order to better myself as a programmer, build a solid foundation/understanding of back end programming, and learn python.
+
+
+All projects: https://roadmap.sh/backend/projects
+
 
 https://roadmap.sh/projects/caching-server
 
@@ -28,3 +33,6 @@ https://roadmap.sh/projects/realtime-leaderboard-system
 
 
 https://roadmap.sh/projects/database-backup-utility
+
+
+https://roadmap.sh/projects/scalable-ecommerce-platform
