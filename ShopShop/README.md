@@ -1,5 +1,5 @@
 # A Scalable E-Commerce Platform, AKA "ShopShop" 🛒🛍️😊
-"ShopShop" is an E-Commerce Backend Platform using a microservices architecture, allowing users to sign up, view,
+"ShopShop" is an E-Commerce Backend Platform utilising a microservices architecture, allowing users to sign up, view,
 cart, and pay for products. Users are notified of purchase and order information via SMS and Email.
 Each service runs as its own independent Django project, and thus can be scaled effectively in production deployment.
 
