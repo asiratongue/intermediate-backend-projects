@@ -1,7 +1,9 @@
-Hey, \🙋🏽‍♂️😊
+# 🙋🏽‍♂️😊
+**Welcome,**
 
-I have decided to pursue the completion of all projects listed on roadmap.sh,
-in order to better myself as a programmer, build a solid foundation/understanding of back end programming, and learn python.
+
+**I have decided to pursue the completion of all projects listed on roadmap.sh,
+in order to better myself as a programmer, build a solid foundation/understanding of back end programming, and get comfortable with python.**
 
 
 https://roadmap.sh/backend/projects
