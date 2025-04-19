@@ -3,7 +3,7 @@
 
 ### **Users**
 
-**POST** `api/users/login/`   
+**POST** `api/users/register/`   
 Register a new user, recieve a JWT code.
 
 **POST** `api/users/login/`   
