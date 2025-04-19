@@ -3,7 +3,7 @@
 ### **Carts**
 
 **POST** `api/carts/add/<str:name>/`   
-Add an Item to cart with given Product name. (use '%20' for spaces)
+Add an Item to cart with given Product name. (use '%20' for spaces).
 
 **DELETE** `api/carts/remove/<str:name>/`   
 Remove an item from cart, using given Product name.
