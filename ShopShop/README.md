@@ -7,7 +7,7 @@ Each service runs as its own independent Django project, and thus can be scaled 
 
 ### Core Services
 - **User Service:** Registration, Login, Authentication, Profile Management
-- **Product Service:** Product catalog management, Product search and detail view, Inventory
+- **Product Service:** Product catalog management, Product search and detail view, Inventory tracking.
 - **Shopping Cart Service:** Cart management, Cart view
 - **Order Service:** Order creation, Order processing, Status tracking
 - **Payment Service:** Secure payment processing via Stripe, Paypal, or Coinbase Commerce, Refunds, Webhooks.
